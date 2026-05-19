@@ -1,4 +1,4 @@
-﻿import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {
   Scale,
   GitBranch,
@@ -41,17 +41,17 @@ const marginTerms = [
   { icon: Banknote, title: 'Initial margin', text: 'The minimum amount you have to deposit upfront to open a position. Set by the exchange or broker based on the volatility of the underlying asset.', warn: false },
   { icon: Shield, title: 'Maintenance margin', text: "The minimum balance you must keep in your account while a position is open. If your balance falls below this, you'll get a margin call.", warn: false },
   { icon: AlertTriangle, title: 'Margin call', text: "A notice from the broker that your account has dropped below the required maintenance level. You either add funds or the broker squares off your position. There's no negotiation.", warn: true },
-  { icon: LineChart, title: 'Leverage ratio', text: 'Expressed as something like 10x, 50x or 500x. A 10x ratio means every ?1 of your capital controls ?10 of trade value. SmartTrade.live offers up to 500x on select instruments.', warn: false },
+  { icon: LineChart, title: 'Leverage ratio', text: 'Expressed as something like 10x, 50x or 500x. A 10x ratio means every ₹1 of your capital controls ₹10 of trade value. SmartTrade.live offers up to 500x on select instruments.', warn: false },
   { icon: Layers, title: 'SPAN and exposure margin', text: 'Used in F&O. SPAN is calculated by the exchange based on potential worst-case loss. Exposure margin is an extra buffer. Together they make up the total margin needed for derivative positions.', warn: false },
   { icon: HandCoins, title: 'MTF (Margin Trading Facility)', text: 'The SEBI-regulated facility where you can buy shares using broker funding. You pay interest on the borrowed amount until you square off.', warn: false },
   { icon: Link2, title: 'Margin pledge', text: 'Using shares or other approved assets as collateral instead of (or in addition to) cash. Lets you free up funds while still keeping your investments.', warn: false },
 ];
 
 const leverageRows = [
-  { leverage: '1x (no margin)', capital: '?1,00,000', value: '?1,00,000', profit: '?2,000', return: '2%' },
-  { leverage: '10x', capital: '?10,000', value: '?1,00,000', profit: '?2,000', return: '20%' },
-  { leverage: '50x', capital: '?2,000', value: '?1,00,000', profit: '?2,000', return: '100%' },
-  { leverage: '100x', capital: '?1,000', value: '?1,00,000', profit: '?2,000', return: '200%' },
+  { leverage: '1x (no margin)', capital: '₹1,00,000', value: '₹1,00,000', profit: '₹2,000', return: '2%' },
+  { leverage: '10x', capital: '₹10,000', value: '₹1,00,000', profit: '₹2,000', return: '20%' },
+  { leverage: '50x', capital: '₹2,000', value: '₹1,00,000', profit: '₹2,000', return: '100%' },
+  { leverage: '100x', capital: '₹1,000', value: '₹1,00,000', profit: '₹2,000', return: '200%' },
 ];
 
 const platformFeatures = [
@@ -76,10 +76,10 @@ const principles = [
 const comparisonRows = [
   { feature: 'Capital required', margin: 'Fraction of trade value', cash: 'Full trade value' },
   { feature: 'Profit potential', margin: 'Magnified by leverage ratio', cash: 'Equal to actual price move' },
-  { feature: 'Loss potential', margin: 'Also magnified � can hit capital fast', cash: 'Limited to amount invested' },
+  { feature: 'Loss potential', margin: 'Also magnified — can hit capital fast', cash: 'Limited to amount invested' },
   { feature: 'Interest / cost', margin: 'MTF interest on borrowed funds', cash: 'None beyond brokerage' },
   { feature: 'Holding period', margin: 'Often short-term to manage cost & risk', cash: 'Any duration' },
-  { feature: 'Skill needed', margin: 'High � risk management critical', cash: 'Lower � fewer moving parts' },
+  { feature: 'Skill needed', margin: 'High — risk management critical', cash: 'Lower — fewer moving parts' },
   { feature: 'Best for', margin: 'Active traders with a tested system', cash: 'Investors and casual traders' },
 ];
 
@@ -100,14 +100,14 @@ const notFit = [
 ];
 
 const faqs = [
-  { q: 'What is margin trading in simple words?', a: "Margin trading means borrowing money from your broker to take a larger trade than your own funds would allow. You put up a fraction of the total trade value as margin, and the broker funds the rest. Both your potential profits and losses are calculated on the full position size � that's why leverage is powerful and dangerous in equal measure." },
+  { q: 'What is margin trading in simple words?', a: "Margin trading means borrowing money from your broker to take a larger trade than your own funds would allow. You put up a fraction of the total trade value as margin, and the broker funds the rest. Both your potential profits and losses are calculated on the full position size — that's why leverage is powerful and dangerous in equal measure." },
   { q: 'Is margin trading legal in India?', a: 'Yes. Margin trading is legal and regulated by SEBI through approved brokers. MTF for equities and exchange-mandated margins for F&O are standard frameworks.' },
   { q: 'What is the maximum leverage available on SmartTrade.live?', a: 'Up to 500x leverage on select instruments, among the highest available for qualified traders on our platform.' },
   { q: 'How does a margin call work?', a: 'When your account equity falls below maintenance margin, the broker notifies you to add funds. If you do not, positions may be squared off automatically to protect both parties.' },
   { q: "What's the difference between initial margin and maintenance margin?", a: 'Initial margin is required to open a position. Maintenance margin is the minimum you must keep while the position is open.' },
   { q: 'Is margin trading good for beginners?', a: 'Generally no. Beginners should master cash trading, stop-losses, and position sizing before using significant leverage.' },
   { q: 'Can I lose more than my deposited capital in margin trading?', a: 'On SmartTrade.live, negative balance protection caps your loss at deposited capital. Without such protection elsewhere, losses could exceed deposits in extreme moves.' },
-  { q: 'What is MTF interest and how much is it?', a: 'MTF interest is the cost of borrowing from your broker for equity margin trades. Rates vary by broker � check your contract note and fee schedule.' },
+  { q: 'What is MTF interest and how much is it?', a: 'MTF interest is the cost of borrowing from your broker for equity margin trades. Rates vary by broker — check your contract note and fee schedule.' },
   { q: 'What happens during a market gap if I\'m using margin?', a: 'Gaps can skip your stop-loss. Losses may exceed what you expected from the stop level, which is why overnight leveraged positions near major events need extra caution.' },
   { q: 'Can I trade with margin in intraday only, or also for longer periods?', a: 'Both are possible depending on product. Intraday margin is common; overnight and positional margin carry additional costs and gap risk.' },
 ];
@@ -119,10 +119,10 @@ export default function MarginTradingPage() {
   return (
     <main>
       <PageHeader
-        title="Margin Trading in India � Trade Bigger Without Tying Up Your Full Capital"
+        title="Margin Trading in India — Trade Bigger Without Tying Up Your Full Capital"
         titleClassName="text-2xl md:text-3xl"
         paragraphs={[
-          "There's a reason every serious trader, at some point, ends up using margin. You see a clear setup, your analysis is sharp, your stop-loss is tight � but your trading capital is what it is. You can either take a small position and watch a great move pass you by, or you can use margin to size the trade properly. Margin trading is the bridge between the trade you can afford and the trade you actually want to take.",
+          "There's a reason every serious trader, at some point, ends up using margin. You see a clear setup, your analysis is sharp, your stop-loss is tight — but your trading capital is what it is. You can either take a small position and watch a great move pass you by, or you can use margin to size the trade properly. Margin trading is the bridge between the trade you can afford and the trade you actually want to take.",
           "SmartTrade.live is built around this idea. We offer margin trading with leverage of up to 500x, real-time margin monitoring, and proper guardrails like negative balance protection so the platform doesn't turn your bad day into a debt collection notice. This page walks you through how margin trading actually works, where it shines, where it bites, and how to use it without blowing up your account.",
         ]}
       />
@@ -159,19 +159,19 @@ export default function MarginTradingPage() {
           <div className="text-gray-700 space-y-4 leading-relaxed">
             <p>
               Margin trading means borrowing money from your broker to take a larger position than your own cash would
-              allow. You put up a fraction of the total trade value � called the margin � and the broker funds the rest.
+              allow. You put up a fraction of the total trade value — called the margin — and the broker funds the rest.
               If the trade works, your returns are calculated on the entire position, not just your own contribution.
               That&apos;s the appeal.
             </p>
             <p>
-              A simple example: you have ?10,000 and you want exposure to a stock or index worth ?1,00,000. Without margin,
-              you can only buy what your ?10,000 buys. With 10x margin, your ?10,000 acts as collateral and you control
-              the full ?1,00,000 position. If that position rises 2%, you&apos;ve made ?2,000 � a 20% return on your
+              A simple example: you have ₹10,000 and you want exposure to a stock or index worth ₹1,00,000. Without margin,
+              you can only buy what your ₹10,000 buys. With 10x margin, your ₹10,000 acts as collateral and you control
+              the full ₹1,00,000 position. If that position rises 2%, you&apos;ve made ₹2,000 — a 20% return on your
               actual capital. If it falls 2%, the loss is also magnified the same way.
             </p>
             <p>
-              This is the entire concept. Everything else � initial margin, maintenance margin, margin calls, MTF
-              interest, SPAN margin � is just the mechanics of how brokers and exchanges manage the risk of lending you
+              This is the entire concept. Everything else — initial margin, maintenance margin, margin calls, MTF
+              interest, SPAN margin — is just the mechanics of how brokers and exchanges manage the risk of lending you
               that money.
             </p>
           </div>
@@ -206,10 +206,10 @@ export default function MarginTradingPage() {
 
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className={sectionTitle}>How Leverage Actually Works � A Worked Example</h2>
+          <h2 className={sectionTitle}>How Leverage Actually Works — A Worked Example</h2>
           <p className="text-gray-700 mb-8">
-            Numbers make this concrete. Say a stock is trading at ?500 and you want to buy 200 shares (total value
-            ?1,00,000). Here&apos;s how the math plays out at different leverage levels:
+            Numbers make this concrete. Say a stock is trading at ₹500 and you want to buy 200 shares (total value
+            ₹1,00,000). Here&apos;s how the math plays out at different leverage levels:
           </p>
           <div className="overflow-x-auto rounded-xl shadow-lg border border-gray-200 mb-6">
             <table className="w-full text-sm">
@@ -236,7 +236,7 @@ export default function MarginTradingPage() {
             </table>
           </div>
           <p className="text-gray-700 italic leading-relaxed">
-            Now flip it � if the stock falls 2% instead of rising, the same percentages apply to your loss. A 2%
+            Now flip it — if the stock falls 2% instead of rising, the same percentages apply to your loss. A 2%
             adverse move at 50x leverage wipes out your entire capital. At 100x, you&apos;re down before you&apos;ve
             even had time to react. This is why leverage is a tool, not a toy. The traders who use it well treat it
             with the respect a circular saw deserves.
@@ -246,7 +246,7 @@ export default function MarginTradingPage() {
 
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className={sectionTitle}>Margin Trading on SmartTrade.live � Platform Features</h2>
+          <h2 className={sectionTitle}>Margin Trading on SmartTrade.live — Platform Features</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {platformFeatures.map(({ icon: Icon, title, text }) => (
               <div key={title} className="flex gap-4">
@@ -280,7 +280,7 @@ export default function MarginTradingPage() {
 
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className={sectionTitle}>Margin Trading vs Cash Trading � Quick Comparison</h2>
+          <h2 className={sectionTitle}>Margin Trading vs Cash Trading — Quick Comparison</h2>
           <div className="overflow-x-auto rounded-xl shadow-lg border border-gray-200 mb-10">
             <table className="w-full text-sm">
               <thead>
@@ -349,7 +349,7 @@ export default function MarginTradingPage() {
 
       <CommunityBanner
         title="Ready to Trade Bigger?"
-        subtitle="Margin trading isn't for everyone, but if you're a serious trader with a tested system and the discipline to use a stop-loss, it changes what's possible from your capital. SmartTrade.live gives you up to 500x leverage, real-time margin tracking, proper risk tools and negative balance protection � the things that turn leverage from a hazard into a tool."
+        subtitle="Margin trading isn't for everyone, but if you're a serious trader with a tested system and the discipline to use a stop-loss, it changes what's possible from your capital. SmartTrade.live gives you up to 500x leverage, real-time margin tracking, proper risk tools and negative balance protection — the things that turn leverage from a hazard into a tool."
         buttonText="Sign Up"
         footerText="Quick KYC, instant activation. Trade your first margin position today."
       />
