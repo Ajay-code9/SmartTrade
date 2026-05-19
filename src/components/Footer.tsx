@@ -28,7 +28,9 @@ export default function Footer() {
               {[Facebook, Instagram, MessageCircle, Youtube, Twitter, Send].map((Icon, idx) => (
                 <a
                   key={idx}
-                  href="#"
+                  href="https://www.smarttrade.live"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="banner-icon-btn w-10 h-10 rounded-full bg-white text-brand-blue flex items-center justify-center hover:bg-brand-orange hover:text-white transition-all transform hover:-translate-y-1"
                 >
                   <Icon size={20} />
@@ -66,14 +68,14 @@ export default function Footer() {
                 </Link>
               </li>
               <li className="pt-4 border-t border-white/10 mt-4">
-                <a href="#" className="hover:text-white transition-colors">
+                <Link to="/become-affiliate" className="hover:text-white transition-colors">
                   Referral Program
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Other Links
-                </a>
+                <Link to="/news-blogs" className="hover:text-white transition-colors">
+                  News & Blogs
+                </Link>
               </li>
             </ul>
           </div>
@@ -120,9 +122,9 @@ export default function Footer() {
             <h4 className="text-xl font-bold italic mb-6">Platforms</h4>
             <ul className="space-y-4 text-white">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link to="/signup" className="hover:text-white transition-colors">
                   Web Trader
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

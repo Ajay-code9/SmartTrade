@@ -168,7 +168,9 @@ export default function LoginPage() {
           ].map(({ Icon, bg }, idx) => (
             <a
               key={idx}
-              href="#"
+              href="https://www.smarttrade.live"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`w-10 h-10 rounded-full ${bg} text-white flex items-center justify-center hover:opacity-90 transition-opacity`}
               aria-label="Social link"
             >

@@ -1,4 +1,6 @@
 import { useMemo, useState, type ReactNode } from 'react';
+import { Link } from 'react-router-dom';
+import { MEDIA_IMAGES } from '../constants/mediaImages';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import BlogCard from '../components/blog/BlogCard';
 import BlogPageSidebar from '../components/blog/BlogPageSidebar';
@@ -41,7 +43,14 @@ export default function NewsBlogsPage() {
           <div className="lg:col-span-5">
             <div className="relative group rounded-lg overflow-hidden border border-gray-200">
               <div className="aspect-[4/3] relative">
-                <img src={featured.image} alt="" className="w-full h-full object-cover" />
+                <img
+                  src={featured.image}
+                  alt=""
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.src = MEDIA_IMAGES.tradingChart;
+                  }}
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
                   <p className="text-lg md:text-xl font-bold uppercase leading-tight drop-shadow">
@@ -67,9 +76,9 @@ export default function NewsBlogsPage() {
               </div>
             </div>
             {featured.category && (
-              <a href="#" className="text-brand-blue text-sm mt-3 inline-block hover:underline">
+              <Link to="/news-blogs" className="text-brand-blue text-sm mt-3 inline-block hover:underline">
                 {featured.category}
-              </a>
+              </Link>
             )}
             <p className="text-gray-400 text-sm mt-1">{featured.date}</p>
             <h2 className="text-xl md:text-2xl font-bold text-gray-900 mt-2 leading-snug">
@@ -85,7 +94,7 @@ export default function NewsBlogsPage() {
             <ul key={page} className="divide-y divide-gray-200">
               {paginatedRecentPosts.map((post) => (
                 <li key={post.id} className="py-4 first:pt-0">
-                  <a href="#" className="block group">
+                  <Link to="/news-blogs" className="block group">
                     <h4 className="font-bold text-gray-900 group-hover:text-brand-blue transition-colors leading-snug">
                       {post.title}
                     </h4>
@@ -93,7 +102,7 @@ export default function NewsBlogsPage() {
                     <span className="text-green-600 text-sm font-medium mt-2 inline-block group-hover:underline">
                       Read More &raquo;
                     </span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -60,35 +60,45 @@ export default function BlogPageSidebar({ variant, futurePosts = [] }: BlogPageS
         <h3 className="font-bold text-gray-900 mb-4">Stay Connected</h3>
         <div className="flex gap-2 flex-wrap">
           <a
-            href="#"
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-10 h-10 rounded bg-[#1877f2] flex items-center justify-center text-white hover:opacity-90"
             aria-label="Facebook"
           >
             <Facebook className="w-5 h-5" />
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-10 h-10 rounded bg-gradient-to-br from-purple-600 to-orange-400 flex items-center justify-center text-white hover:opacity-90"
             aria-label="Instagram"
           >
             <Instagram className="w-5 h-5" />
           </a>
           <a
-            href="#"
+            href="https://wa.me/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-10 h-10 rounded bg-[#25d366] flex items-center justify-center text-white hover:opacity-90"
             aria-label="WhatsApp"
           >
             <WhatsAppIcon className="w-5 h-5" />
           </a>
           <a
-            href="#"
+            href="https://www.youtube.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-10 h-10 rounded bg-[#ff0000] flex items-center justify-center text-white hover:opacity-90"
             aria-label="YouTube"
           >
             <Youtube className="w-5 h-5" />
           </a>
           <a
-            href="#"
+            href="https://x.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-10 h-10 rounded bg-black flex items-center justify-center text-white hover:opacity-90 text-sm font-bold"
             aria-label="X"
           >
