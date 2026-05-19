@@ -1,0 +1,6 @@
+{
+  "name": "SmartTrade - Zero Brokerage Trading",
+  "description": "High-performance trading platform with zero brokerage and 500x margin.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

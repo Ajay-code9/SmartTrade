@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --nav-height: 5rem;
+
+  --color-brand-blue: #2b59ff;
+  --color-brand-orange: #ff6b4a;
+  --color-brand-dark-blue: #1e3a8a;
+  --color-brand-footer: #153285;
+  --color-brand-navy: #1a365d;
+  /* Banner gradient (ref: deeper top under nav → lighter center → subtle bottom) */
+  --color-brand-banner-top: #3a62f0;
+  --color-brand-banner-mid: #5880fa;
+  --color-brand-banner-bottom: #4a72f7;
+  --color-brand-banner: #5880fa;
+}
+
+/* Site-wide scale: matches ~90% browser zoom at 100% zoom */
+html {
+  font-size: 90%;
+}
+
+@supports (zoom: 1) {
+  html {
+    font-size: 100%;
+    zoom: 0.9;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-brand-blue) #e8edf5;
+}
+
+body {
+  @apply font-sans text-gray-900 bg-white;
+}
+
+/* Custom vertical scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2b59ff #e8edf5;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #e8edf5;
+  border-radius: 100px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2b59ff 0%, #4d7cff 50%, #ff6b4a 100%);
+  border-radius: 100px;
+  border: 2px solid #e8edf5;
+  background-clip: padding-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #1e3a8a 0%, #2b59ff 50%, #e85a3c 100%);
+  border: 2px solid #dce3ef;
+}
+
+*::-webkit-scrollbar-corner {
+  background: #e8edf5;
+}
+
+@layer utilities {
+  /* Ref hero: flat blue + faint chart grid + candle watermark from banner image */
+  .banner-chart-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.09) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.09) 1px, transparent 1px);
+    background-size: 52px 52px;
+  }
+
+  /* Content below fixed nav when banner is pulled up with -mt-[nav-height] */
+  .banner-below-nav {
+    padding-top: calc(var(--nav-height) * 2 + 1.25rem);
+  }
+
+  @media (min-width: 768px) {
+    .banner-below-nav {
+      padding-top: calc(var(--nav-height) * 2 + 2.5rem);
+    }
+  }
+
+  /* Hero only — vertical gradient */
+  .banner-bg-gradient {
+    background: linear-gradient(
+      180deg,
+      var(--color-brand-banner-top) 0%,
+      var(--color-brand-banner-top) 12%,
+      var(--color-brand-banner-mid) 45%,
+      var(--color-brand-banner-mid) 70%,
+      var(--color-brand-banner-bottom) 100%
+    );
+  }
+
+  /* Cards, footer, page headers — same flat blue as navbar */
+  .banner-bg-solid {
+    background-color: var(--color-brand-banner-top);
+  }
+
+  .banner-candle-layer {
+    mix-blend-mode: screen;
+    opacity: 0.22;
+    filter: saturate(1.02) contrast(1.04);
+  }
+
+  /* High-contrast text on all blue banner / card surfaces */
+  .banner-surface {
+    color: #ffffff;
+  }
+
+  .banner-surface :where(h1, h2, h3, h4, h5, h6, p, li, label, td, th, small, strong, em) {
+    color: #ffffff;
+  }
+
+  .banner-surface :where(h1, h2, h3, h4, h5, h6, p, li) {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  }
+
+  .banner-surface [class*='text-white/'],
+  .banner-surface [class*='text-gray-'] {
+    color: #ffffff !important;
+  }
+
+  .banner-surface .opacity-70,
+  .banner-surface .opacity-90 {
+    opacity: 1 !important;
+    color: #ffffff !important;
+  }
+
+  /* Footer / banner text links — not icon buttons */
+  .banner-surface ul a,
+  .banner-surface .banner-text-link {
+    color: #ffffff;
+  }
+
+  .banner-surface ul a:hover {
+    color: #ffffff;
+  }
+
+  .banner-surface .banner-icon-btn {
+    color: var(--color-brand-banner-top) !important;
+  }
+
+  .banner-surface .banner-icon-btn:hover {
+    color: #ffffff !important;
+  }
+
+  .banner-surface button.hover\:bg-white:hover,
+  .banner-surface .hover\:text-brand-blue:hover {
+    color: var(--color-brand-blue) !important;
+    text-shadow: none;
+  }
+
+  .clip-path-triangle {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+
+  .typewriter-cursor {
+    animation: typewriter-cursor 1.05s ease-in-out infinite;
+  }
+
+  .scrollbar-sidebar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.35) transparent;
+  }
+
+  .scrollbar-sidebar::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .scrollbar-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 8px 0;
+  }
+
+  .scrollbar-sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 100px;
+  }
+
+  .scrollbar-sidebar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+  }
+}
+
+@keyframes typewriter-cursor {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  50%,
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
