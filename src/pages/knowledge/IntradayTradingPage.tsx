@@ -24,8 +24,8 @@ export default function IntradayTradingPage() {
         title="Intraday Trading in India — Take the Day's Move and Sleep at Night"
         titleClassName="text-2xl md:text-3xl"
         paragraphs={[
-          "Intraday trading is the art of buying and selling the same instrument on the same trading day. No overnight risk, no waiting for quarterly results, no surprise gap-downs on Monday morning. You enter when the setup forms, exit before the closing bell, and either book a profit or take the loss and move on. Clean.",
-          "It also happens to be the most demanding form of trading. You're competing against people who do this for a living, with faster systems and better data than you. The difference between a profitable intraday trader and a losing one isn't intelligence — it's discipline, the right tools, and a tested system. SmartTrade.live gives you the tools and the cost structure. The rest is on you. This page is about helping you bring the rest.",
+          "Intraday trading means opening and closing positions within the same session. You avoid overnight gap risk and free up capital each day, but you must square off before the close or the broker will do it for you.",
+          "It is also the most time-intensive style: liquidity, spreads, and speed matter. Consistent intraday traders rely on a written plan, strict stops, and a platform with fast execution and clear charges. SmartTrade.live offers zero brokerage on supported products and tools for charts and order management. This page covers the basics before you size up.",
         ]}
       />
 
@@ -63,7 +63,7 @@ export default function IntradayTradingPage() {
         </div>
       </ContentSection>
 
-      <CommunityBanner />
+      <CommunityBanner variant="light" texture="chart" />
     </main>
   );
 }

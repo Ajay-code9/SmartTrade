@@ -23,7 +23,7 @@ export default function WhySmartTradePage() {
     <main className="pt-0">
       <PageHeader
         title="Why SmartTrade"
-        subtitle="Empowering all traders, SmartTrade offers a comprehensive platform with professional tools, real-time data, and powerful analytics, all in a user-friendly interface."
+        subtitle="Zero brokerage on supported products, up to 500x margin on select instruments, and a single terminal for equities, commodities, and global CFDs."
       />
 
       {/* ZERO Brokerage */}
@@ -106,15 +106,15 @@ export default function WhySmartTradePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Multi Markets</h2>
           <p className="text-gray-600 leading-relaxed">
-            Unify your global trading experience with our comprehensive platform, offering access to both
-            national and international markets from a single, streamlined interface. SmartTrade.live is a
-            professional and supportive environment, designed to maximize your potential for success.
+            Trade Indian equities and commodities alongside global CFDs from one account. Charts, order
+            types, and wallet balances stay in sync across web and mobile so you are not switching tools
+            mid-session.
           </p>
         </div>
       </section>
 
       {/* Open Account */}
-      <BannerSection className="py-16 md:py-24">
+      <BannerSection texture="chart" className="py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-4xl font-bold mb-4">
             Open Account in Just 1 Minute and Start Trading

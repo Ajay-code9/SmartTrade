@@ -9,7 +9,7 @@ import SmartTradeLogo from './auth/SmartTradeLogo';
 export default function Footer() {
   return (
     <footer className="pt-24 pb-8 overflow-hidden relative banner-surface">
-      <BannerBackground />
+      <BannerBackground texture="chart" />
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none flex items-center justify-center z-[1]">
         <svg viewBox="0 0 1000 500" className="w-[120%] h-full fill-white">
           <path d="M100,100 C150,150 200,50 250,100 C300,150 350,100 400,150 C450,200 500,100 550,150 C600,200 650,150 700,200 C750,250 800,150 850,200 C900,250 950,200 1000,250" />

@@ -3,7 +3,7 @@ import BlueBannerCard from './layout/BlueBannerCard';
 export default function StatsStrip() {
   return (
     <section className="bg-white py-12 px-4 sm:px-6 lg:px-8">
-      <BlueBannerCard className="max-w-7xl mx-auto rounded-none py-16 px-8">
+      <BlueBannerCard texture="chart" className="max-w-7xl mx-auto rounded-none py-16 px-8">
         <h2 className="text-[32px] md:text-[45px] font-semibold mb-6 uppercase tracking-tight leading-[51px]">
           Enjoy Maximum Profits with ZERO BROKERAGE
         </h2>

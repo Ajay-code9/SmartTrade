@@ -19,7 +19,7 @@ const features = [
   {
     id: 'margin',
     title: '500x Margin Facilities',
-    content: 'Leverage your trades up to 500x to maximize your market exposure and potential returns.',
+    content: 'Trade with up to 500x margin on select instruments when you need more exposure per rupee of capital.',
     active: false
   },
   {
@@ -51,7 +51,7 @@ export default function InvestmentSection() {
 
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           <div className="w-full lg:w-1/2">
-            <BlueBannerCard className="rounded-xl p-8 shadow-2xl text-left">
+            <BlueBannerCard texture="candles" className="rounded-xl p-8 shadow-2xl text-left">
               <div className="aspect-video bg-white/10 rounded-lg backdrop-blur-md p-6 flex flex-col justify-between">
                 <div className="flex justify-between items-start">
                   <div className="space-y-2">

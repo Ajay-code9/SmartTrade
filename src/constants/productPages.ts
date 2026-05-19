@@ -44,7 +44,7 @@ export const stocksPage: ProductPageConfig = {
   heading: 'why',
   features: [
     { icon: Globe, text: 'Global market access' },
-    { icon: HandHelping, text: 'Comprehensive stock selection' },
+    { icon: HandHelping, text: 'Wide stock coverage' },
     { icon: Clock, text: 'Real-time market insights' },
     { icon: Smartphone, text: 'User-friendly interface' },
     { icon: Headphones, text: 'Expert support' },

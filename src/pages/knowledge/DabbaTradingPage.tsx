@@ -1,209 +1,209 @@
-import { useState } from 'react';
 import PageHeader from '../../components/layout/PageHeader';
 import CommunityBanner from '../../components/marketing/CommunityBanner';
 import FaqAccordion from '../../components/content/FaqAccordion';
+import { COMMUNITY_BANNER } from '../../constants/siteCopy';
 
 const sectionTitle = 'text-xl md:text-2xl font-bold text-[#1a365d] mb-6';
 const subTitle = 'text-lg font-bold text-[#1a365d] mb-3';
 
 const keyCharacteristics = [
-  'Trades are executed off-market',
-  'No official exchange transaction',
-  'Higher leverage opportunities',
-  'Faster trade execution',
-  'Lower margin requirements',
+  'Orders are matched off-exchange (not on NSE/BSE)',
+  'Settlement is between trader and operator',
+  'Margin requirements are often lower than exchange products',
+  'Execution speed depends on the operator, not the exchange queue',
+  'Regulatory protection is limited compared to exchange trading',
 ];
 
 const howItWorksSteps = [
   {
-    title: 'Account Setup',
-    text: 'A trader registers with a Dabba Trading Platform such as SmartTrade.live. Unlike traditional brokerage accounts, the onboarding process is usually quick.',
+    title: 'Account setup',
+    text: 'You register with an operator or platform. KYC and funding rules vary by provider.',
   },
   {
-    title: 'Deposit Trading Capital',
-    text: 'Users deposit funds into their trading wallet on the Online Dabba Trading Platform.',
+    title: 'Fund the wallet',
+    text: 'Trading capital is credited to an internal ledger. Withdrawal policies should be clear before you deposit.',
   },
   {
-    title: 'Trade Execution',
-    text: 'The trader places buy or sell orders through the Dabba Trading App. However, the order does not go to the stock exchange. Instead, the trade is internally recorded within the Dabba Trading Platform.',
+    title: 'Place orders',
+    text: 'Buy and sell instructions are recorded in the operator’s system. Prices usually follow the live exchange feed, but the trade itself is not routed to NSE/BSE.',
   },
   {
-    title: 'Profit or Loss Settlement',
-    text: 'Profits or losses are calculated based on real market price movement. This system allows traders to enjoy fast order execution through the Top Dabba Trading Platform.',
+    title: 'P&L settlement',
+    text: 'Profit or loss is calculated from price movement and settled in your wallet with the operator.',
   },
 ];
 
 const whyPreferReasons = [
   {
-    title: 'Fast Execution',
-    text: 'A modern Dabba Trading App executes trades instantly without exchange delays.',
+    title: 'Lower formalities',
+    text: 'Onboarding can be faster than a full exchange-backed account, depending on the operator.',
   },
   {
-    title: 'High Leverage',
-    text: 'Many Top Dabba Trading Platforms allow traders to take larger positions with smaller capital.',
+    title: 'Flexible margin',
+    text: 'Operators may offer higher leverage than standard exchange margin for similar exposure.',
   },
   {
-    title: 'Simple Interface',
-    text: 'Unlike complex brokerage platforms, a Dabba Trading Platform is often easier to use.',
+    title: 'Simple workflow',
+    text: 'Many systems focus on order entry, charts, and wallet balance without exchange-specific product menus.',
   },
   {
-    title: 'Mobile Accessibility',
-    text: 'Most traders today rely on Dabba Trading Apps that allow trading anytime.',
+    title: 'Mobile access',
+    text: 'Apps are built for intraday monitoring and quick execution on phone or web.',
   },
   {
-    title: 'Lower Transaction Costs',
-    text: 'Some Best Dabba Trading Platforms offer reduced trading charges compared to traditional brokers.',
+    title: 'Cost structure',
+    text: 'Charges are set by the operator — compare brokerage, funding, and withdrawal fees upfront.',
   },
 ];
 
 const comparisonRows = [
-  { feature: 'Trade Location', dabba: 'Off-market', stock: 'NSE/BSE' },
-  { feature: 'Regulation', dabba: 'Informal', stock: 'SEBI regulated' },
-  { feature: 'Speed', dabba: 'Faster', stock: 'Exchange dependent' },
-  { feature: 'Leverage', dabba: 'Higher', stock: 'Limited' },
-  { feature: 'Brokerage', dabba: 'Often lower', stock: 'Standard charges' },
+  { feature: 'Trade location', dabba: 'Off-market (operator book)', stock: 'NSE / BSE' },
+  { feature: 'Regulation', dabba: 'Limited / informal', stock: 'SEBI-regulated' },
+  { feature: 'Order routing', dabba: 'Internal matching', stock: 'Exchange order book' },
+  { feature: 'Leverage', dabba: 'Operator-defined', stock: 'Exchange & broker rules' },
+  { feature: 'Investor protection', dabba: 'Depends on operator', stock: 'SEBI framework' },
 ];
 
 const platformFeatures = [
   {
-    title: 'Real-Time Market Data',
-    text: 'A Best Dabba Trading Platform should provide accurate live market prices.',
+    title: 'Live prices',
+    text: 'Charts and quotes should track exchange feeds with minimal delay.',
   },
   {
-    title: 'User-Friendly Interface',
-    text: 'An intuitive Dabba Trading App allows traders to execute orders quickly.',
+    title: 'Stable order screen',
+    text: 'Entry, exit, and position view should be clear during volatile sessions.',
   },
   {
-    title: 'Fast Order Execution',
-    text: 'Speed is critical in Dabba Trading, and the platform must handle high trading volume.',
+    title: 'Execution speed',
+    text: 'Slippage and fill quality matter more than marketing claims — test with small size first.',
   },
   {
-    title: 'Secure Transactions',
-    text: 'Reliable Online Dabba Trading Platforms ensure safe deposits and withdrawals.',
+    title: 'Wallet transparency',
+    text: 'Deposits, margins used, and withdrawals should be visible in real time.',
   },
   {
-    title: 'Advanced Trading Tools',
-    text: 'The Best Dabba Trading Platform should offer technical charts, indicators, stop-loss options, and margin tracking.',
+    title: 'Risk controls',
+    text: 'Stop-loss, alerts, and margin utilisation help avoid silent blow-ups.',
   },
 ];
 
 const appBenefits = [
   {
-    title: 'Trade Anywhere',
-    text: 'A Dabba Trading App allows users to monitor markets from mobile devices.',
+    title: 'Trade from mobile',
+    text: 'Monitor positions and square off without being tied to a desktop terminal.',
   },
   {
-    title: 'Instant Notifications',
-    text: 'Many Online Dabba Trading Platforms send real-time alerts.',
+    title: 'Price alerts',
+    text: 'Notifications for levels, news, or margin thresholds reduce missed exits.',
   },
   {
-    title: 'Market Insights',
-    text: 'A modern Dabba Trading Platform often includes analytical tools and price charts.',
+    title: 'Charts and indicators',
+    text: 'Standard technical tools should be available without a separate terminal subscription.',
   },
   {
-    title: 'Faster Decision Making',
-    text: 'Because traders receive live updates, they can react quickly using their Dabba Trading App.',
+    title: 'Faster decisions',
+    text: 'Intraday traders benefit when the app shows positions and P&L in one place.',
   },
   {
-    title: 'Simplified Trading',
-    text: 'The Best Dabba Trading Platform focuses on ease of use so beginners can trade confidently.',
+    title: 'Support channel',
+    text: 'Reachable support during market hours is non-negotiable for wallet-based trading.',
   },
 ];
 
 const risks = [
   {
-    title: 'Lack of Regulation',
-    text: 'Most Dabba Trading Platforms operate outside official regulatory frameworks.',
+    title: 'Regulatory gap',
+    text: 'Off-market trading does not carry the same safeguards as exchange membership and SEBI oversight.',
   },
   {
-    title: 'Counterparty Risk',
-    text: 'Because trades occur within the Online Dabba Trading Platform, traders depend on the platform’s credibility.',
+    title: 'Counterparty risk',
+    text: 'You rely on the operator’s solvency and honesty. Research reputation before large deposits.',
   },
   {
-    title: 'Market Volatility',
-    text: 'Like any trading activity, Dabba Trading involves financial risk.',
+    title: 'Market risk',
+    text: 'Leverage and volatility can erase capital quickly. Use stop-losses and position limits.',
   },
   {
-    title: 'Platform Reliability',
-    text: 'Choosing a Top Dabba Trading Platform is crucial to ensure stability and fair trade execution.',
+    title: 'Platform risk',
+    text: 'Downtime, manual intervention, or disputed settlements are operational risks — not just market risk.',
   },
 ];
 
 const chooseCriteria = [
   {
-    title: 'Check Platform Reputation',
-    text: 'Research reviews and trader feedback regarding the Dabba Trading Platform.',
+    title: 'Track record',
+    text: 'Look for consistent payouts, clear terms, and feedback from traders you trust.',
   },
   {
-    title: 'Verify Technology',
-    text: 'A good Dabba Trading App must offer fast execution and minimal downtime.',
+    title: 'Technology',
+    text: 'Test the app in live market hours. Laggy charts or failed orders are red flags.',
   },
   {
-    title: 'Evaluate Trading Tools',
-    text: 'Professional traders often prefer Online Dabba Trading Platforms that include advanced charting tools.',
+    title: 'Tools',
+    text: 'Charts, order types, and margin reporting should match how you actually trade.',
   },
   {
-    title: 'Customer Support',
-    text: 'Reliable Top Dabba Trading Platforms offer responsive support teams.',
+    title: 'Support',
+    text: 'Phone, chat, or ticket response during 9:15–3:30 IST matters when money is at stake.',
   },
   {
-    title: 'Secure Payment System',
-    text: 'Deposits and withdrawals should be smooth on the Dabba Trading Platform.',
+    title: 'Payments',
+    text: 'Deposit and withdrawal timelines should be documented, not promised verbally.',
   },
 ];
 
 const startSteps = [
-  'Choose a Reliable Platform — Select a trusted Online Dabba Trading Platform like SmartTrade.live.',
-  'Register an Account — Create your trading account on the Dabba Trading App.',
-  'Deposit Funds — Add trading capital to your wallet.',
-  'Analyze the Market — Use charts and indicators available on the Dabba Trading Platform.',
-  'Place Your First Trade — Execute buy or sell orders directly from the Dabba Trading App.',
-  'Manage Risk — Always set stop-loss levels when trading on any Top Dabba Trading Platform.',
+  'Read the risk section below before funding an account.',
+  'Register on SmartTrade.live and complete KYC.',
+  'Deposit only capital you can afford to lose.',
+  'Start with small size until you trust execution and settlement.',
+  'Use a stop-loss on every trade.',
+  'Review weekly P&L and withdrawal tests.',
 ];
 
 const smartTradeHighlights = [
   {
-    title: 'Advanced Trading Interface',
-    text: 'The SmartTrade.live Dabba Trading Platform offers modern trading tools designed for both beginners and experienced traders.',
+    title: 'Unified terminal',
+    text: 'Web and mobile access with charts, watchlists, and order management in one place.',
   },
   {
-    title: 'Fast Execution Engine',
-    text: 'Orders placed on the SmartTrade.live Dabba Trading App are processed quickly to capture market opportunities.',
+    title: 'Fast order path',
+    text: 'Built for intraday workflows where seconds matter on entries and exits.',
   },
   {
-    title: 'Mobile Trading Experience',
-    text: 'The platform supports seamless trading through its Dabba Trading App, allowing users to trade anytime.',
+    title: 'Margin visibility',
+    text: 'Used margin, available balance, and utilisation shown while positions are open.',
   },
   {
-    title: 'Secure Transactions',
-    text: 'SmartTrade.live focuses on safe financial transactions within its Online Dabba Trading Platform.',
+    title: 'Funding controls',
+    text: 'Deposit and withdrawal requests tracked in-app with support escalation if delayed.',
   },
   {
-    title: 'Growing Trader Community',
-    text: 'Because of its reliability and performance, SmartTrade.live is becoming one of the Top Dabba Trading Platforms for traders exploring off-market trading opportunities.',
+    title: 'Risk tools',
+    text: 'Stop-loss, alerts, and negative balance protection on supported products.',
   },
 ];
 
 const faqs = [
   {
-    q: 'What is Dabba Trading?',
-    a: 'Dabba Trading is an informal trading method where trades occur outside official stock exchanges using a Dabba Trading Platform.',
+    q: 'What is dabba trading?',
+    a: 'Dabba trading is off-exchange trading where an operator records your buy/sell in an internal book. Prices usually follow NSE/BSE, but the trade is not cleared on the exchange.',
   },
   {
-    q: 'What is a Dabba Trading App?',
-    a: 'A Dabba Trading App is a mobile or web application that lets you place off-market trades, monitor live prices, manage your wallet, and receive alerts on an Online Dabba Trading Platform.',
+    q: 'Is dabba trading legal in India?',
+    a: 'Exchange trading through SEBI-registered brokers is the regulated route. Off-market arrangements carry legal and counterparty risks. Understand local laws and operator terms before participating.',
   },
   {
-    q: 'Which is the Best Dabba Trading Platform?',
-    a: 'The best platform offers real-time data, fast execution, secure payments, advanced charting, and responsive support. SmartTrade.live is built around these requirements for modern traders.',
+    q: 'How is SmartTrade.live different from a traditional broker?',
+    a: 'We focus on speed, zero brokerage on supported products, high margin on select instruments, and in-app risk tools. Product availability and regulation depend on your account type — check onboarding documents.',
   },
   {
-    q: 'Is Dabba Trading profitable?',
-    a: 'Profitability depends on your strategy, discipline, and risk management. Like any form of trading, Dabba Trading can produce gains or losses — there are no guaranteed returns.',
+    q: 'Can I lose more than my deposit?',
+    a: 'On products with negative balance protection, losses are capped at funded capital. Without it, fast markets can exceed your wallet. Always use stop-losses.',
   },
   {
-    q: 'How do I start Dabba Trading?',
-    a: 'Choose a trusted Online Dabba Trading Platform, register, deposit funds, analyze the market with available tools, place your first trade from the Dabba Trading App, and always use stop-losses to manage risk.',
+    q: 'How do I start?',
+    a: 'Sign up, complete KYC, fund your wallet, and trade small size until you are comfortable with execution, fees, and withdrawals.',
   },
 ];
 
@@ -231,35 +231,15 @@ function FeatureBlocks({ items }: { items: { title: string; text: string }[] }) 
 }
 
 export default function DabbaTradingPage() {
-  const [openFaq, setOpenFaq] = useState(0);
-
   return (
     <main>
       <PageHeader
         title="Introduction to Dabba Trading"
         titleClassName="text-2xl md:text-4xl"
         paragraphs={[
-          'The rise of digital trading platforms has transformed how people access financial markets. Alongside traditional stock market trading, Dabba Trading has gained popularity among traders seeking fast execution, high leverage, and minimal regulatory friction.',
-          <>
-            Today, traders are increasingly searching for a <strong>Dabba Trading App</strong>, a{' '}
-            <strong>Dabba Trading Platform</strong>, or an <strong>Online Dabba Trading Platform</strong> that allows
-            them to participate in market movements without the complexities of traditional brokerage systems.
-          </>,
-          <>
-            As financial technology evolves, modern <strong>Top Dabba Trading Platform</strong> solutions now offer
-            sophisticated interfaces, real-time price feeds, and mobile accessibility that rival many mainstream
-            trading applications.
-          </>,
-          <>
-            This comprehensive guide explains everything about <strong>Dabba Trading</strong>, including how it works,
-            the advantages of using a <strong>Dabba Trading App</strong>, risks involved, and how to select the{' '}
-            <strong>Best Dabba Trading Platform</strong>.
-          </>,
-          <>
-            If you are looking to start trading quickly and efficiently, platforms like{' '}
-            <strong>SmartTrade.live</strong> are becoming a preferred choice among traders exploring Online Dabba
-            Trading Platforms.
-          </>,
+          'Dabba trading is an informal market where orders are matched inside a broker or operator system instead of on NSE or BSE. Traders still watch live exchange prices, but settlement happens off-book between the client and the operator.',
+          'Some active traders use this model for speed and margin flexibility. Others avoid it because regulation, transparency, and counterparty risk differ from exchange trading. This page covers mechanics, trade-offs, and what to verify before you fund an account.',
+          'SmartTrade.live provides charts, wallet-based trading, margin tools, and support channels described below. Read the risks section before you trade.',
         ]}
       />
 
@@ -267,55 +247,39 @@ export default function DabbaTradingPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className={sectionTitle}>What is Dabba Trading?</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Dabba Trading refers to an informal trading system where trades are executed outside official stock
-            exchanges. Instead of routing orders through regulated exchanges like NSE or BSE, trades occur internally
-            within a Dabba Trading Platform.
+            In dabba trading, the operator maintains an internal ledger of your positions. When you buy or sell, the
+            instruction is not sent to the exchange order book. P&L is still tied to market prices, but legal title and
+            clearing work differently from a standard demat trade.
           </p>
           <p className="text-gray-700 leading-relaxed mb-8">
-            In simple terms, Dabba Trading allows traders to speculate on stock price movements without the trade
-            actually being recorded on the exchange.
+            Treat it as a bilateral arrangement: you are exposed to market moves and to the operator’s ability to
+            honour balances.
           </p>
 
-          <h3 className={subTitle}>Key Characteristics of Dabba Trading</h3>
+          <h3 className={subTitle}>Key characteristics</h3>
           <BulletList items={keyCharacteristics} />
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Because of these features, many traders prefer using an Online Dabba Trading Platform rather than
-            traditional brokerage systems.
-          </p>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Today, modern Dabba Trading Apps provide seamless interfaces where users can trade stocks, indices, and
-            commodities quickly.
-          </p>
           <p className="text-gray-700 leading-relaxed mb-12">
-            Platforms such as SmartTrade.live aim to provide traders with a reliable Dabba Trading Platform offering
-            advanced tools and easy accessibility.
+            If you already trade on NSE/BSE, compare execution, margin, fees, and dispute resolution before moving
+            size off-exchange.
           </p>
 
-          <h2 className={sectionTitle}>How Dabba Trading Works</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            Understanding how Dabba Trading works is crucial before choosing a Dabba Trading App or Online Dabba
-            Trading Platform.
-          </p>
+          <h2 className={sectionTitle}>How dabba trading works</h2>
           <FeatureBlocks items={howItWorksSteps} />
 
-          <h2 className={sectionTitle}>Why Traders Prefer Online Dabba Trading Platforms</h2>
+          <h2 className={sectionTitle}>Why some traders use off-market platforms</h2>
           <p className="text-gray-700 leading-relaxed mb-6">
-            Over the past decade, Online Dabba Trading Platforms have gained traction due to several advantages.
+            Reasons vary — margin, speed, or simpler workflows. None of these remove market or operator risk.
           </p>
           <FeatureBlocks items={whyPreferReasons} />
-          <p className="text-gray-700 leading-relaxed mb-12">
-            Because of these benefits, many traders now search for the Best Dabba Trading Platform that provides
-            speed, reliability, and advanced trading tools.
-          </p>
 
-          <h2 className={sectionTitle}>Dabba Trading vs Stock Market Trading</h2>
+          <h2 className={sectionTitle}>Dabba trading vs exchange trading</h2>
           <div className="overflow-x-auto rounded-xl shadow-lg border border-gray-200 mb-6">
             <table className="w-full text-sm">
               <thead>
                 <tr className="bg-[#1a365d] text-white">
                   <th className="px-4 py-4 font-semibold text-left">Feature</th>
-                  <th className="px-4 py-4 font-semibold text-center">Dabba Trading</th>
-                  <th className="px-4 py-4 font-semibold text-center">Stock Market Trading</th>
+                  <th className="px-4 py-4 font-semibold text-center">Dabba / off-market</th>
+                  <th className="px-4 py-4 font-semibold text-center">Exchange trading</th>
                 </tr>
               </thead>
               <tbody>
@@ -329,71 +293,31 @@ export default function DabbaTradingPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            A Dabba Trading Platform is designed for traders who want faster market participation. Meanwhile,
-            traditional markets provide regulated transparency.
-          </p>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Because of the growing demand, many Online Dabba Trading Platforms are improving their infrastructure to
-            offer better trading experiences.
-          </p>
           <p className="text-gray-700 leading-relaxed mb-12">
-            Platforms like SmartTrade.live are focusing on providing a professional Dabba Trading App environment for
-            modern traders.
+            Exchange trading offers SEBI oversight, central clearing, and standard dispute processes. Off-market trading
+            shifts more responsibility to the operator you choose.
           </p>
 
-          <h2 className={sectionTitle}>Key Features of the Best Dabba Trading Platform</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            When choosing a Top Dabba Trading Platform, traders should look for several essential features.
-          </p>
+          <h2 className={sectionTitle}>What to look for in a platform</h2>
           <FeatureBlocks items={platformFeatures} />
-          <p className="text-gray-700 leading-relaxed mb-12">
-            Platforms such as SmartTrade.live are becoming popular because they combine these features into a single
-            powerful Dabba Trading Platform.
-          </p>
 
-          <h2 className={sectionTitle}>Benefits of Using a Dabba Trading App</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            The introduction of the Dabba Trading App has transformed how traders interact with financial markets.
-          </p>
+          <h2 className={sectionTitle}>Mobile and web trading</h2>
           <FeatureBlocks items={appBenefits} />
-          <p className="text-gray-700 leading-relaxed mb-12">
-            Platforms like SmartTrade.live provide traders with a seamless Dabba Trading App experience designed for
-            speed and efficiency.
-          </p>
 
-          <h2 className={sectionTitle}>Risks and Legal Considerations of Dabba Trading</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            Although Dabba Trading offers advantages, traders must understand the risks.
-          </p>
+          <h2 className={sectionTitle}>Risks and legal considerations</h2>
           <FeatureBlocks items={risks} />
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Traders should always research thoroughly before selecting a Dabba Trading Platform.
-          </p>
           <p className="text-gray-700 leading-relaxed mb-12">
-            Platforms such as SmartTrade.live emphasize transparency and reliability for traders seeking a stable
-            Online Dabba Trading Platform.
+            Do not deposit money you cannot afford to lose. Consult a qualified adviser if you are unsure about
+            regulatory status in your jurisdiction.
           </p>
 
-          <h2 className={sectionTitle}>How to Choose the Top Dabba Trading Platform</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            Selecting the Best Dabba Trading Platform requires careful evaluation.
-          </p>
+          <h2 className={sectionTitle}>Choosing an operator</h2>
           <FeatureBlocks items={chooseCriteria} />
-          <p className="text-gray-700 leading-relaxed mb-12">
-            Among the emerging platforms, SmartTrade.live is gaining attention as a modern Dabba Trading Platform that
-            integrates trading technology with user-friendly design.
-          </p>
 
-          <h2 className={sectionTitle}>Step-by-Step Guide to Start Dabba Trading</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">If you want to begin Dabba Trading, follow these steps.</p>
+          <h2 className={sectionTitle}>Getting started (checklist)</h2>
           <BulletList items={startSteps} />
 
-          <h2 className={sectionTitle}>Why SmartTrade.live is Emerging as the Best Dabba Trading Platform</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            Among the growing number of Online Dabba Trading Platforms, SmartTrade.live stands out due to its
-            technology-driven approach.
-          </p>
+          <h2 className={sectionTitle}>SmartTrade.live at a glance</h2>
           <FeatureBlocks items={smartTradeHighlights} />
         </div>
       </section>
@@ -402,35 +326,20 @@ export default function DabbaTradingPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <FaqAccordion items={faqs} title="FAQs" inline />
 
-          <h2 className={sectionTitle}>Conclusion</h2>
+          <h2 className={`${sectionTitle} mt-12`}>Summary</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            The evolution of financial technology has introduced new ways for traders to participate in markets, and
-            Dabba Trading has become one of the most discussed alternatives to traditional trading systems.
-          </p>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            With the availability of modern Dabba Trading Apps and Online Dabba Trading Platforms, traders now have
-            faster access to market opportunities.
-          </p>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            However, choosing the Best Dabba Trading Platform remains the most critical step for ensuring reliability
-            and performance.
-          </p>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Platforms like SmartTrade.live are rapidly gaining recognition as a Top Dabba Trading Platform due to
-            their advanced technology, mobile accessibility, and efficient trading systems.
+            Dabba trading is off-exchange, wallet-based speculation on market prices. It can offer speed and margin
+            flexibility, but counterparty and regulatory risks are higher than trading through a SEBI-registered broker
+            on NSE/BSE.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            For traders exploring alternative trading methods, a reliable Dabba Trading Platform combined with proper
-            market knowledge can help unlock new opportunities in the financial markets.
+            If you use SmartTrade.live, start small, test withdrawals, and treat risk controls as mandatory — not
+            optional.
           </p>
         </div>
       </section>
 
-      <CommunityBanner
-        title="Join the SmartTrade community to avail the benefits!"
-        subtitle="Improving people's financial lives through planning, trading, and earning!"
-        buttonText="Trade Now"
-      />
+      <CommunityBanner variant="light" texture="chart" {...COMMUNITY_BANNER} buttonText="Trade Now" />
     </main>
   );
 }

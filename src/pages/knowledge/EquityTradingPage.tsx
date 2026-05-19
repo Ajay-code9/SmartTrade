@@ -103,7 +103,7 @@ export default function EquityTradingPage() {
     <main>
       <PageHeader
         title="Equity Trading: A Complete Guide for Indian Investors"
-        subtitle="Your comprehensive roadmap to navigating the Indian Stock Market in 2026."
+        subtitle="How equity trading works on NSE and BSE — accounts, orders, charges, and risk basics for Indian markets."
       />
 
       <ValuePropositionSection
@@ -230,7 +230,7 @@ export default function EquityTradingPage() {
         </div>
       </section>
 
-      <CommunityBanner />
+      <CommunityBanner variant="light" texture="chart" />
 
       {/* Key concepts */}
       <section className="py-12 md:py-16 bg-white">
@@ -370,7 +370,7 @@ export default function EquityTradingPage() {
         </div>
       </section>
 
-      <CommunityBanner />
+      <CommunityBanner variant="light" texture="candles" />
 
       <FaqAccordion items={faqs} numbered disclaimer={faqDisclaimer} />
     </main>

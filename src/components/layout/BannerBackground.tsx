@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { cn } from '../../lib/cn';
-import { BANNER_BG_IMAGE } from '../../constants/assets';
+import { BANNER_TEXTURE_SRC, type BannerTexture } from '../../constants/assets';
 import SectionBottomNotch from './SectionBottomNotch';
 
 export type BannerBackgroundVariant = 'gradient' | 'solid';
@@ -9,9 +9,11 @@ type BannerBackgroundProps = {
   className?: string;
   /** gradient = hero only; solid = header blue on all other blue surfaces */
   variant?: BannerBackgroundVariant;
+  /** candles = bannerbg-scaled; chart = bg-1 — alternate so sections do not look identical */
+  texture?: BannerTexture;
 };
 
-export function BannerBackground({ className, variant = 'solid' }: BannerBackgroundProps) {
+export function BannerBackground({ className, variant = 'solid', texture = 'candles' }: BannerBackgroundProps) {
   return (
     <>
       <div
@@ -31,7 +33,7 @@ export function BannerBackground({ className, variant = 'solid' }: BannerBackgro
       <div
         aria-hidden
         className="absolute inset-0 bg-cover bg-center bg-no-repeat banner-candle-layer"
-        style={{ backgroundImage: `url(${BANNER_BG_IMAGE})` }}
+        style={{ backgroundImage: `url(${BANNER_TEXTURE_SRC[texture]})` }}
       />
     </>
   );
@@ -44,6 +46,7 @@ type BannerSectionProps = {
   /** Only homepage hero uses gradient; other banner sections use solid header blue */
   gradient?: boolean;
   bottomNotch?: 'sm' | 'md';
+  texture?: BannerTexture;
 };
 
 export default function BannerSection({
@@ -52,6 +55,7 @@ export default function BannerSection({
   mergeWithNav,
   gradient = false,
   bottomNotch,
+  texture = 'candles',
 }: BannerSectionProps) {
   return (
     <section
@@ -61,7 +65,7 @@ export default function BannerSection({
         className,
       )}
     >
-      <BannerBackground variant={gradient ? 'gradient' : 'solid'} />
+      <BannerBackground variant={gradient ? 'gradient' : 'solid'} texture={texture} />
       <div className="relative z-10">{children}</div>
       {bottomNotch ? <SectionBottomNotch size={bottomNotch} /> : null}
     </section>

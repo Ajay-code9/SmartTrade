@@ -102,8 +102,8 @@ export default function FuturesOptionsPage() {
         title="Futures and Options Trading in India — Built for Traders Who Want More Than Just Equity"
         titleClassName="text-2xl md:text-4xl"
         paragraphs={[
-          "Most people in India start their market journey with stocks. Buy a share, hold it, hope it goes up. Simple enough. But once you get a feel for how prices actually move, you realise something — there's a whole other layer of the market where traders are doing far more interesting things. That layer is F&O. Futures and options.",
-          "At SmartTrade.live, the F&O segment is where a big chunk of our users spend their time, and honestly, it's not hard to see why. You get leverage, you get flexibility, you can profit when markets go up or down, and you can hedge positions you already hold. The catch? You have to actually understand what you're doing. This page is meant to get you there.",
+          "Many traders in India begin with cash equities, then move to derivatives for hedging, leverage, or defined risk. Futures and options (F&O) trade on NSE and BSE with standardised contracts, margin rules, and weekly or monthly expiries.",
+          "On SmartTrade.live, a large share of active users trade F&O for leverage, hedging, and defined-risk strategies. You can participate when markets rise or fall, and you can offset risk in a stock portfolio with index or stock options. The requirement is the same everywhere: understand contract specs, margin, and expiry before you size up. This page covers those basics.",
         ]}
       />
 
@@ -200,7 +200,7 @@ export default function FuturesOptionsPage() {
         </div>
       </section>
 
-      <CommunityBanner />
+      <CommunityBanner variant="light" texture="chart" />
 
       {/* How F&O works */}
       <section className="py-12 md:py-20 bg-gray-50">
@@ -303,8 +303,10 @@ export default function FuturesOptionsPage() {
 
       {/* Final CTA */}
       <CommunityBanner
+        variant="light"
+        texture="candles"
         title="Ready to Start Trading F&O the Right Way?"
-        subtitle="Futures and options aren't for everyone, but if you've outgrown plain stock buying and want to actually engage with the market, this is where the real action is. SmartTrade.live gives you the platform, the leverage, the analytics and the support. What you bring is the discipline."
+        subtitle="F&O suits traders who understand margin, expiry, and contract specs. SmartTrade.live provides execution, charts, and up to 500x leverage on select instruments — you bring position sizing and stop-loss discipline."
         buttonText="Sign Up"
         footerText="No paperwork, No waiting. Get into your first F&O trade in minutes."
       />

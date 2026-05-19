@@ -3,7 +3,7 @@ import BlueBannerCard from '../layout/BlueBannerCard';
 export default function FOIndexWidgets() {
   return (
     <div className="absolute left-[150px] md:left-[170px] top-0 flex flex-col gap-4 z-20">
-      <BlueBannerCard className="w-[200px] md:w-[220px] rounded-2xl p-4 text-left shadow-xl">
+      <BlueBannerCard texture="candles" className="w-[200px] md:w-[220px] rounded-2xl p-4 text-left shadow-xl">
         <div className="flex justify-between items-start mb-2">
           <p className="text-sm font-semibold">US30 (Indices - US)</p>
           <span className="text-lg">🇺🇸</span>
@@ -17,7 +17,7 @@ export default function FOIndexWidgets() {
           />
         </svg>
       </BlueBannerCard>
-      <BlueBannerCard className="w-[200px] md:w-[220px] rounded-2xl p-4 text-left shadow-xl">
+      <BlueBannerCard texture="chart" className="w-[200px] md:w-[220px] rounded-2xl p-4 text-left shadow-xl">
         <div className="flex justify-between items-start mb-2">
           <p className="text-sm font-semibold">GOLD (Commodities - Metals)</p>
           <span className="text-lg">🪙</span>

@@ -119,7 +119,7 @@ export default function CommodityTradingPage() {
         titleClassName="text-2xl md:text-3xl"
         paragraphs={[
           "If your portfolio only has stocks, you're missing half the picture. Equities move with corporate earnings, sentiment and a handful of indices. Commodities move with something completely different — weather in Brazil, OPEC meetings, a war in the Middle East, the dollar index, harvest seasons, central bank gold buying. That's why traders who actually understand markets keep one eye on Nifty and the other on MCX.",
-          'Commodity trading on SmartTrade.live gives you direct access to the assets that move the world economy — precious metals, energy, base metals and agricultural products — through a single fast, low-cost platform. Whether you want to hedge against inflation with gold, ride crude oil volatility on a US inventory day, or take a position in silver during a global rally, this is where you do it.',
+          'Commodity trading on SmartTrade.live covers precious metals, energy, base metals, and agricultural contracts on MCX and NCDEX. Use it to hedge inflation with gold, trade crude around US inventory data, or take directional positions in silver and industrial metals — with zero brokerage on supported products and margin up to 500x on select instruments.',
         ]}
       />
 
@@ -328,7 +328,7 @@ export default function CommodityTradingPage() {
         </div>
       </section>
 
-      <CommunityBanner />
+      <CommunityBanner variant="light" texture="chart" />
 
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -365,6 +365,8 @@ export default function CommodityTradingPage() {
       <FaqAccordion items={faqs} title="Frequently Asked Questions" disclaimer={faqDisclaimer} />
 
       <CommunityBanner
+        variant="light"
+        texture="candles"
         title="Ready to Trade Gold, Crude and More?"
         subtitle="Open your SmartTrade.live account and access MCX commodities with zero brokerage, 500x leverage, and charts that keep up when markets move fast."
         buttonText="Sign Up"

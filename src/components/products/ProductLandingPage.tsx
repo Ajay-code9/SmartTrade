@@ -4,9 +4,7 @@ import ValuePropositionSection from '../sections/ValuePropositionSection';
 import MockupHero from '../mockups/MockupHero';
 import CommunityBanner from '../marketing/CommunityBanner';
 import type { FeatureItem } from '../sections/FeatureIconList';
-
-const COMMUNITY_TITLE = 'Join the SmartTrade.live community to avail the benefits!';
-const COMMUNITY_SUBTITLE = "Improving people's financial lives through planning, trading, and earning!";
+import { COMMUNITY_BANNER } from '../../constants/siteCopy';
 
 export type ProductLandingPageProps = {
   title: string;
@@ -31,7 +29,7 @@ export default function ProductLandingPage({
         features={features}
         visual={<MockupHero>{mockup}</MockupHero>}
       />
-      <CommunityBanner variant="light" title={COMMUNITY_TITLE} subtitle={COMMUNITY_SUBTITLE} buttonText="Trade Now" />
+      <CommunityBanner variant="light" {...COMMUNITY_BANNER} buttonText="Trade Now" />
     </main>
   );
 }

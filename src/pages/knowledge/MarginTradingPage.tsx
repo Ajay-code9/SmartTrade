@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import {
   Scale,
   GitBranch,
@@ -123,7 +123,7 @@ export default function MarginTradingPage() {
         titleClassName="text-2xl md:text-3xl"
         paragraphs={[
           "There's a reason every serious trader, at some point, ends up using margin. You see a clear setup, your analysis is sharp, your stop-loss is tight — but your trading capital is what it is. You can either take a small position and watch a great move pass you by, or you can use margin to size the trade properly. Margin trading is the bridge between the trade you can afford and the trade you actually want to take.",
-          "SmartTrade.live is built around this idea. We offer margin trading with leverage of up to 500x, real-time margin monitoring, and proper guardrails like negative balance protection so the platform doesn't turn your bad day into a debt collection notice. This page walks you through how margin trading actually works, where it shines, where it bites, and how to use it without blowing up your account.",
+          "SmartTrade.live is built around this idea. We offer margin trading with leverage of up to 500x, real-time margin monitoring, and guardrails such as negative balance protection on supported products. This page explains how margin works, when traders use it, the main risks, and how to size positions responsibly.",
         ]}
       />
 
@@ -202,7 +202,7 @@ export default function MarginTradingPage() {
         </div>
       </section>
 
-      <CommunityBanner />
+      <CommunityBanner variant="light" texture="chart" />
 
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -238,8 +238,8 @@ export default function MarginTradingPage() {
           <p className="text-gray-700 italic leading-relaxed">
             Now flip it — if the stock falls 2% instead of rising, the same percentages apply to your loss. A 2%
             adverse move at 50x leverage wipes out your entire capital. At 100x, you&apos;re down before you&apos;ve
-            even had time to react. This is why leverage is a tool, not a toy. The traders who use it well treat it
-            with the respect a circular saw deserves.
+            even had time to react. Leverage amplifies outcomes in both directions. Size positions and stops for the
+            margin you use, not for the notional exposure alone.
           </p>
         </div>
       </section>
@@ -348,6 +348,8 @@ export default function MarginTradingPage() {
       <FaqAccordion items={faqs} title="Frequently Asked Questions About Margin Trading" disclaimer={faqDisclaimer} />
 
       <CommunityBanner
+        variant="light"
+        texture="candles"
         title="Ready to Trade Bigger?"
         subtitle="Margin trading isn't for everyone, but if you're a serious trader with a tested system and the discipline to use a stop-loss, it changes what's possible from your capital. SmartTrade.live gives you up to 500x leverage, real-time margin tracking, proper risk tools and negative balance protection — the things that turn leverage from a hazard into a tool."
         buttonText="Sign Up"

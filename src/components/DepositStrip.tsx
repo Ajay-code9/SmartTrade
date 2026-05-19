@@ -3,7 +3,7 @@ import BlueBannerCard from './layout/BlueBannerCard';
 export default function DepositStrip() {
   return (
     <section className="bg-white py-12 px-4 sm:px-6 lg:px-8">
-      <BlueBannerCard className="max-w-7xl mx-auto rounded-none py-20 px-8">
+      <BlueBannerCard texture="chart" className="max-w-7xl mx-auto rounded-none py-20 px-8">
         <p className="text-white font-bold tracking-widest text-sm mb-4">Payments Update</p>
         <h2 className="text-[32px] md:text-[45px] font-semibold mb-8 tracking-tight leading-[51px]">
           24X7 Instant Deposit & Withdrawal

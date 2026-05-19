@@ -25,7 +25,7 @@ export default function TradingPage() {
     <main>
       <PageHeader
         title="Trading"
-        subtitle="SmartTrade.live offers a comprehensive platform for all your trading needs. From equities to commodities, explore the diverse range of financial instruments."
+        subtitle="Trade equities, commodities, F&O, and global CFDs from one account. Zero brokerage on supported products and margin up to 500x on select instruments."
       />
       <ValuePropositionSection
         features={valueFeatures}
@@ -36,7 +36,7 @@ export default function TradingPage() {
           </MockupHero>
         }
       />
-      <CommunityBanner variant="light" />
+      <CommunityBanner variant="light" texture="chart" />
     </main>
   );
 }

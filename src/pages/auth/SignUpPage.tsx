@@ -27,8 +27,8 @@ export default function SignUpPage() {
             Investing Simplified
           </h1>
           <p className="text-white text-base lg:text-lg leading-relaxed">
-            Take control of your finances with a seamless, intuitive investing experience. Get smart
-            insights, powerful tools, and a user-friendly platform to invest with confidence.
+            Open an account in minutes. Trade equities, commodities, and derivatives from one platform
+            with zero brokerage on supported products and margin up to 500x on select instruments.
           </p>
         </div>
 

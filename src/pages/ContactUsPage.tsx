@@ -169,7 +169,7 @@ export default function ContactUsPage() {
             </div>
 
             <div className="lg:col-span-5 space-y-6">
-              <BlueBannerCard className="rounded-xl p-8 text-left">
+              <BlueBannerCard texture="chart" className="rounded-xl p-8 text-left">
                 <div className="flex items-start gap-4 mb-6">
                   <Clock className="w-8 h-8 shrink-0 opacity-90" />
                   <div>

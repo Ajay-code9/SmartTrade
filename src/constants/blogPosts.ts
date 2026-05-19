@@ -12,7 +12,7 @@ const img = (id: string) =>
 
 export const featuredPost: BlogPost = {
   id: 'featured-1',
-  title: 'The Free Vs Paid Equity Trading Platform in',
+  title: 'Free vs paid equity trading platforms in India',
   date: 'May 6, 2026',
   category: 'trading platform in india',
   excerpt:
@@ -24,7 +24,7 @@ export const featuredSlides = [
   featuredPost,
   {
     id: 'featured-2',
-    title: 'FREE VS PAID EQUITY TRADING PLATFORM IN INDIA',
+    title: 'Free vs paid equity trading platforms in India',
     date: 'May 6, 2026',
     category: 'equity trading',
     excerpt: 'Which One is Right for You? A complete guide to choosing between free and paid platforms.',
@@ -35,31 +35,31 @@ export const featuredSlides = [
 export const recentPosts: BlogPost[] = [
   {
     id: 'r1',
-    title: 'How to Convert Physical Shares to Demat in 2026: Complete Guide',
+    title: 'How to convert physical shares to demat',
     date: 'May 16, 2026',
     image: img('1611974717482-482fe0051142'),
   },
   {
     id: 'r2',
-    title: 'NSDL vs CDSL: Which Depository Is Better in 2026?',
+    title: 'NSDL vs CDSL: how depositories work',
     date: 'May 15, 2026',
     image: img('1590283603385-17ffb3a7f29f'),
   },
   {
     id: 'r3',
-    title: 'Upcoming IPO 2026 in India: Complete List, Dates, GMP, Price',
+    title: 'Upcoming IPOs in India: what to check before applying',
     date: 'May 2, 2026',
     image: img('1642790103517-18107388d748'),
   },
   {
     id: 'r4',
-    title: 'Best Demat Account for Beginners in India 2026',
+    title: 'Opening a demat account as a beginner',
     date: 'April 28, 2026',
     image: img('1460925895917-afdab827c52f'),
   },
   {
     id: 'r5',
-    title: 'Intraday Trading Tips for New Traders in 2026',
+    title: 'Intraday trading basics for new traders',
     date: 'April 22, 2026',
     image: img('1551288049-bebda4e38f71'),
   },
@@ -188,7 +188,7 @@ export const futureTradingPosts: BlogPost[] = [
 export const marginTradingPosts: BlogPost[] = [
   {
     id: 'mt1',
-    title: '500X Margin Trading: How to Leverage More Capital',
+    title: 'High margin trading: sizing and risk limits',
     date: 'April 20, 2026',
     image: img('1611974717482-482fe0051142'),
   },
@@ -200,7 +200,7 @@ export const marginTradingPosts: BlogPost[] = [
   },
   {
     id: 'mt3',
-    title: 'Nasdaq tumbles 400 points—how is a Chinese AI app driving markets?',
+    title: 'Overnight gaps: what moved global indices',
     date: 'April 8, 2026',
     image: img('1551288049-bebda4e38f71'),
   },
