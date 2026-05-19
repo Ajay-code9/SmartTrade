@@ -4,7 +4,10 @@ export default function US30ChartCard() {
   const timeframes = ['1H', '4H', '6H', '12H', '1W'];
 
   return (
-    <BlueBannerCard texture="chart" className="absolute left-[140px] md:left-[160px] top-4 w-[260px] md:w-[300px] rounded-2xl shadow-2xl z-20 p-4 text-left">
+    <BlueBannerCard
+      texture="chart"
+      className="w-full max-w-[260px] sm:max-w-[280px] md:max-w-[300px] rounded-2xl shadow-2xl p-4 text-left shrink-0"
+    >
       <p className="text-sm font-semibold mb-3">US30 (Indices - US)</p>
       <svg viewBox="0 0 260 100" className="w-full h-auto mb-3">
         {[40, 55, 45, 70, 50, 65, 40, 75, 55, 80].map((h, i) => (

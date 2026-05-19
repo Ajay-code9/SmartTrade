@@ -10,7 +10,7 @@ const candles = [
 
 export default function IntradayChartCard() {
   return (
-    <div className="absolute left-[140px] md:left-[160px] top-6 w-[280px] md:w-[320px] rounded-2xl bg-white/90 backdrop-blur shadow-xl z-20 border border-gray-100 p-4">
+    <div className="w-full max-w-[280px] sm:max-w-[300px] md:max-w-[320px] rounded-2xl bg-white/90 backdrop-blur shadow-xl border border-gray-100 p-4 shrink-0">
       <svg viewBox="0 0 220 120" className="w-full h-auto">
         {candles.map((c, i) => (
           <g key={i}>

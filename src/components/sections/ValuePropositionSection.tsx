@@ -34,9 +34,9 @@ export default function ValuePropositionSection({
   return (
     <section className={cn('py-16 md:py-24', className ?? 'bg-white')}>
       <Container>
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-10 xl:gap-16">
           {visual}
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 min-w-0">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">{headings[heading]}</h2>
             <FeatureIconList features={features} />
           </div>

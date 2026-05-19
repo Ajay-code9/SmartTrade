@@ -8,7 +8,9 @@ type MockupHeroProps = {
 
 export default function MockupHero({ children, className }: MockupHeroProps) {
   return (
-    <div className={cn('w-full lg:w-1/2 relative min-h-[420px] flex items-center justify-center', className)}>
+    <div
+      className={cn('w-full lg:w-1/2 relative min-h-[420px] flex items-center justify-center', className)}
+    >
       {children}
     </div>
   );

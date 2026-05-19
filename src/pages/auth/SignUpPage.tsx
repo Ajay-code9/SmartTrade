@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MessageCircle } from 'lucide-react';
 import IndiaPhoneField from '../../components/forms/IndiaPhoneField';
@@ -14,9 +14,22 @@ export default function SignUpPage() {
     e.preventDefault();
   };
 
+  useEffect(() => {
+    const html = document.documentElement;
+    const { body } = document;
+    const prevHtmlOverflow = html.style.overflow;
+    const prevBodyOverflow = body.style.overflow;
+    html.style.overflow = 'hidden';
+    body.style.overflow = 'hidden';
+    return () => {
+      html.style.overflow = prevHtmlOverflow;
+      body.style.overflow = prevBodyOverflow;
+    };
+  }, []);
+
   return (
-    <div className="flex h-[100dvh] max-h-[100dvh] w-full flex-col overflow-hidden lg:flex-row">
-      <section className="relative flex min-h-0 flex-1 flex-col justify-between overflow-hidden banner-surface p-8 lg:h-full lg:w-1/2 lg:flex-none lg:p-12">
+    <div className="fixed inset-0 flex h-full min-h-screen w-full flex-col overflow-hidden lg:flex-row">
+      <section className="relative flex h-full min-h-0 w-full flex-col justify-between overflow-hidden banner-surface p-8 lg:w-1/2 lg:p-12">
         <BannerBackground />
         <div className="relative z-10">
           <SmartTradeLogo variant="light" size="lg" showLink />
@@ -41,7 +54,7 @@ export default function SignUpPage() {
         </button>
       </section>
 
-      <section className="flex min-h-0 flex-1 items-center justify-center overflow-y-auto bg-white px-6 py-10 lg:h-full lg:w-1/2 lg:px-16 lg:py-16">
+      <section className="flex h-full min-h-0 w-full items-center justify-center overflow-y-auto bg-white px-6 py-10 lg:w-1/2 lg:px-16 lg:py-16">
         <div className="w-full max-w-md">
           <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3">Create an account</h2>
           <p className="text-gray-500 text-sm leading-relaxed mb-8">
