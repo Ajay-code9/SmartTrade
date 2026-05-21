@@ -15,12 +15,12 @@ type ValuePropositionSectionProps = {
 const headings: Record<HeadingVariant, ReactNode> = {
   why: (
     <>
-      Why <span className="text-brand-blue">SmartTrade.live</span>
+      Why <span className="text-brand-blue">TRADEADDA.live</span>
     </>
   ),
   value: (
     <>
-      How <span className="text-brand-blue">SmartTrade.live</span> Offers Value
+      How <span className="text-brand-blue">TRADEADDA.live</span> Offers Value
     </>
   ),
 };

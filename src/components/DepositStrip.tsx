@@ -9,12 +9,12 @@ export default function DepositStrip() {
           24X7 Instant Deposit & Withdrawal
         </h2>
         <p className="text-sm md:text-lg max-w-4xl mx-auto text-white leading-relaxed mb-12">
-          Ready for a payment experience that&apos;s both genuine and fast? At SmartTrade.live, we&apos;re all about making your deposit & withdrawal smooth and swift. Trade with confidence and choose from multiple payment methods like UPI, NEFT, and RTGS.
+          Ready for a payment experience that&apos;s both genuine and fast? At TRADEADDA.live, we&apos;re all about making your deposit & withdrawal smooth and swift. Trade with confidence and choose from multiple payment methods like UPI, NEFT, and RTGS.
         </p>
 
         <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
           <button className="px-10 py-3 rounded-md border border-white text-white font-bold hover:bg-white hover:text-brand-blue transition-all italic">
-            Why SmartTrade?
+            Why TRADEADDA?
           </button>
           <button className="px-10 py-3 rounded-md bg-brand-orange text-white font-bold hover:bg-opacity-90 transition-all italic shadow-lg">
             Trade Now

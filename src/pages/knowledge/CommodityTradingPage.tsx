@@ -75,7 +75,7 @@ const comparisonRows = [
   { feature: 'Underlying asset', commodity: 'Physical goods — metals, energy, agri', equity: 'Shares of listed companies' },
   { feature: 'Main exchange', commodity: 'MCX and NCDEX', equity: 'NSE and BSE' },
   { feature: 'Trading hours', commodity: '9:00 AM to 11:30 PM', equity: '9:15 AM to 3:30 PM' },
-  { feature: 'Leverage', commodity: 'Higher — up to 500x on SmartTrade.live', equity: 'Lower, with strict SEBI margin rules', boldCommodity: true },
+  { feature: 'Leverage', commodity: 'Higher — up to 500x on TRADEADDA.live', equity: 'Lower, with strict SEBI margin rules', boldCommodity: true },
   { feature: 'Main price drivers', commodity: 'Global demand, USD, geopolitics, weather', equity: 'Earnings, sector trends, domestic data' },
   { feature: 'Tax treatment', commodity: 'Non-speculative business income (most cases)', equity: 'Capital gains or speculative income' },
   { feature: 'Best for', commodity: 'Hedgers, diversifiers, evening traders', equity: 'Investors and intraday equity traders' },
@@ -115,11 +115,11 @@ export default function CommodityTradingPage() {
   return (
     <main>
       <PageHeader
-        title="Commodity Trading in India — Trade Gold, Crude Oil, Silver and More on SmartTrade.live"
+        title="Commodity Trading in India — Trade Gold, Crude Oil, Silver and More on TRADEADDA.live"
         titleClassName="text-2xl md:text-3xl"
         paragraphs={[
           "If your portfolio only has stocks, you're missing half the picture. Equities move with corporate earnings, sentiment and a handful of indices. Commodities move with something completely different — weather in Brazil, OPEC meetings, a war in the Middle East, the dollar index, harvest seasons, central bank gold buying. That's why traders who actually understand markets keep one eye on Nifty and the other on MCX.",
-          'Commodity trading on SmartTrade.live covers precious metals, energy, base metals, and agricultural contracts on MCX and NCDEX. Use it to hedge inflation with gold, trade crude around US inventory data, or take directional positions in silver and industrial metals — with zero brokerage on supported products and margin up to 500x on select instruments.',
+          'Commodity trading on TRADEADDA.live covers precious metals, energy, base metals, and agricultural contracts on MCX and NCDEX. Use it to hedge inflation with gold, trade crude around US inventory data, or take directional positions in silver and industrial metals — with zero brokerage on supported products and margin up to 500x on select instruments.',
         ]}
       />
 
@@ -132,7 +132,7 @@ export default function CommodityTradingPage() {
             </div>
             <div className="w-full lg:w-1/2">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">
-                How <span className="text-brand-blue">SmartTrade.live</span> Offers Value
+                How <span className="text-brand-blue">TRADEADDA.live</span> Offers Value
               </h2>
               <ul className="space-y-6">
                 {valueFeatures.map(({ icon: Icon, text }) => (
@@ -163,7 +163,7 @@ export default function CommodityTradingPage() {
               In India, commodity trading is regulated by SEBI and happens primarily on two exchanges — the Multi
               Commodity Exchange (MCX) for metals and energy, and the National Commodity & Derivatives Exchange (NCDEX)
               for agricultural products. The MCX is by far the larger of the two and is where most active traders spend
-              their time. On SmartTrade.live, you get access to all the major commodity instruments traders actually use,
+              their time. On TRADEADDA.live, you get access to all the major commodity instruments traders actually use,
               with intuitive charts and execution that doesn&apos;t lag when the market gets busy.
             </p>
             <p>People come to commodity markets for three main reasons:</p>
@@ -204,7 +204,7 @@ export default function CommodityTradingPage() {
 
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className={sectionTitle}>Why Trade Commodities on SmartTrade.live</h2>
+          <h2 className={sectionTitle}>Why Trade Commodities on TRADEADDA.live</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyTradeFeatures.map(({ icon: Icon, color, title, text }) => (
               <div key={title} className="flex gap-4 bg-[#eef6ff] border border-blue-100 rounded-xl p-6">
@@ -222,7 +222,7 @@ export default function CommodityTradingPage() {
 
       <section className="py-12 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className={sectionTitle}>How to Start Commodity Trading on SmartTrade.live</h2>
+          <h2 className={sectionTitle}>How to Start Commodity Trading on TRADEADDA.live</h2>
           <p className="text-gray-700 mb-10">Getting started is intentionally short. Here&apos;s the full flow:</p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
             {startSteps.map(({ icon: Icon, title, text, highlight }) => (
@@ -368,7 +368,7 @@ export default function CommodityTradingPage() {
         variant="light"
         texture="candles"
         title="Ready to Trade Gold, Crude and More?"
-        subtitle="Open your SmartTrade.live account and access MCX commodities with zero brokerage, 500x leverage, and charts that keep up when markets move fast."
+        subtitle="Open your TRADEADDA.live account and access MCX commodities with zero brokerage, 500x leverage, and charts that keep up when markets move fast."
         buttonText="Sign Up"
         footerText="Start with mini contracts. Learn the evening session. Trade responsibly."
       />

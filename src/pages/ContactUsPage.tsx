@@ -8,8 +8,8 @@ const contactChannels = [
   {
     icon: Mail,
     title: 'Email Support',
-    detail: 'support@smarttrade.live',
-    href: 'mailto:support@smarttrade.live',
+    detail: 'support@tradeadda.live',
+    href: 'mailto:support@tradeadda.live',
     note: 'We reply within 24 hours on business days.',
   },
   {
@@ -63,7 +63,7 @@ export default function ContactUsPage() {
     <main>
       <PageHeader
         title="Contact Us"
-        subtitle="Questions about trading, your account, or SmartTrade.live? Our team is here to help. Reach out anytime—we typically respond within one business day."
+        subtitle="Questions about trading, your account, or TRADEADDA.live? Our team is here to help. Reach out anytime—we typically respond within one business day."
       />
 
       <section className="relative -mt-12 md:-mt-16 pb-20 bg-white">
@@ -96,7 +96,7 @@ export default function ContactUsPage() {
                 <div className="rounded-xl bg-green-50 border border-green-200 p-8 text-center">
                   <p className="text-green-800 font-semibold text-lg mb-2">Message sent successfully!</p>
                   <p className="text-green-700 text-sm mb-6">
-                    Thank you for contacting SmartTrade.live. Our team will review your request and respond shortly.
+                    Thank you for contacting TRADEADDA.live. Our team will review your request and respond shortly.
                   </p>
                   <button
                     type="button"
@@ -186,7 +186,7 @@ export default function ContactUsPage() {
                   <div>
                     <h3 className="font-bold text-lg mb-1">Pan-India presence</h3>
                     <p className="text-white text-sm leading-relaxed">
-                      SmartTrade.live serves traders across major cities including Mumbai, Delhi, Bangalore,
+                      TRADEADDA.live serves traders across major cities including Mumbai, Delhi, Bangalore,
                       Hyderabad, Chennai, Pune, Kolkata, and more.
                     </p>
                   </div>

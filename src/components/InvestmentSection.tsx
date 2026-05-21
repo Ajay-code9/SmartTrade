@@ -7,7 +7,7 @@ const features = [
   {
     id: 'secure',
     title: 'Secure Investment',
-    content: 'At SmartTrade.live, we safeguard your interests and ensure your investment journey is as secure as it is prosperous.',
+    content: 'At TRADEADDA.live, we safeguard your interests and ensure your investment journey is as secure as it is prosperous.',
     active: true
   },
   {

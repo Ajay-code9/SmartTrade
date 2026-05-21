@@ -4,7 +4,7 @@ export default function PrivacyPolicyPage() {
   return (
     <LegalArticleLayout title="Privacy Policy">
         <p>
-          SmartTrade.live respects your right to privacy. This Privacy Policy explains who we are, how we
+          TRADEADDA.live respects your right to privacy. This Privacy Policy explains who we are, how we
           collect, share and use personal information about you, and how you can exercise your privacy rights.
           We recommend that you read this Privacy Policy in full to ensure you are fully informed.
         </p>
@@ -90,7 +90,7 @@ export default function PrivacyPolicyPage() {
           </p>
           <ul className="list-disc pl-6 space-y-2 mb-6">
             <li>To present our Site and its contents to you.</li>
-            <li>To provide you with SmartTrade information, products, or services that you request from us.</li>
+            <li>To provide you with TRADEADDA information, products, or services that you request from us.</li>
             <li>To provide you with notices about your account, including expiration and renewal notices.</li>
             <li>
               To carry out our obligations and enforce our rights arising from any contracts entered into between
@@ -110,7 +110,7 @@ export default function PrivacyPolicyPage() {
           <p className="mb-4">In any other way we may describe when you provide the information.</p>
           <p className="mb-4">For any other purpose with your consent.</p>
           <p>
-            We may also use your information to contact you about SmartTrade services that may be of interest to
+            We may also use your information to contact you about TRADEADDA services that may be of interest to
             you.
           </p>
         </section>

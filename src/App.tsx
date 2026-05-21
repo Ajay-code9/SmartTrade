@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import HomePage from './pages/HomePage';
-import WhySmartTradePage from './pages/WhySmartTradePage';
+import WhyTradeAddaPage from './pages/WhyTradeAddaPage';
 import BecomeAffiliatePage from './pages/BecomeAffiliatePage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsConditionsPage from './pages/TermsConditionsPage';
@@ -31,7 +31,7 @@ export default function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route element={<Layout />}>
           <Route path="/" element={<HomePage />} />
-          <Route path="/why-smarttrade" element={<WhySmartTradePage />} />
+          <Route path="/why-tradeadda" element={<WhyTradeAddaPage />} />
           <Route path="/become-affiliate" element={<BecomeAffiliatePage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="/terms-and-conditions" element={<TermsConditionsPage />} />

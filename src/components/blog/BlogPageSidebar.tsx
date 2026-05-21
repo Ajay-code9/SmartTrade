@@ -45,14 +45,14 @@ export default function BlogPageSidebar({ variant, futurePosts = [] }: BlogPageS
     <aside className="space-y-8">
       <div>
         <h3 className="font-bold text-gray-900 text-lg mb-2">
-          Start Trading Smarter with SmartTrade.live
+          Start Trading with TRADEADDA.live
         </h3>
       </div>
       <div>
         <h3 className="font-bold text-gray-900 mb-4">Facebook Feed</h3>
         <div className="bg-[#1e3a6c] rounded-lg p-8 text-center min-h-[140px] flex flex-col items-center justify-center">
           <span className="text-5xl text-brand-orange font-serif leading-none">&ldquo;</span>
-          <p className="text-brand-blue text-xl font-semibold mt-2">SmartTrade.live</p>
+          <p className="text-brand-blue text-xl font-semibold mt-2">TRADEADDA.live</p>
           <span className="text-5xl text-brand-orange font-serif leading-none mt-1">&rdquo;</span>
         </div>
       </div>

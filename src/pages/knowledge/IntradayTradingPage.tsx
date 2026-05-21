@@ -25,7 +25,7 @@ export default function IntradayTradingPage() {
         titleClassName="text-2xl md:text-3xl"
         paragraphs={[
           "Intraday trading means opening and closing positions within the same session. You avoid overnight gap risk and free up capital each day, but you must square off before the close or the broker will do it for you.",
-          "It is also the most time-intensive style: liquidity, spreads, and speed matter. Consistent intraday traders rely on a written plan, strict stops, and a platform with fast execution and clear charges. SmartTrade.live offers zero brokerage on supported products and tools for charts and order management. This page covers the basics before you size up.",
+          "It is also the most time-intensive style: liquidity, spreads, and speed matter. Consistent intraday traders rely on a written plan, strict stops, and a platform with fast execution and clear charges. TRADEADDA.live offers zero brokerage on supported products and tools for charts and order management. This page covers the basics before you size up.",
         ]}
       />
 

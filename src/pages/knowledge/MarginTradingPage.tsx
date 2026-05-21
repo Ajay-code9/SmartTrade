@@ -1,4 +1,4 @@
-﻿import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {
   Scale,
   GitBranch,
@@ -41,7 +41,7 @@ const marginTerms = [
   { icon: Banknote, title: 'Initial margin', text: 'The minimum amount you have to deposit upfront to open a position. Set by the exchange or broker based on the volatility of the underlying asset.', warn: false },
   { icon: Shield, title: 'Maintenance margin', text: "The minimum balance you must keep in your account while a position is open. If your balance falls below this, you'll get a margin call.", warn: false },
   { icon: AlertTriangle, title: 'Margin call', text: "A notice from the broker that your account has dropped below the required maintenance level. You either add funds or the broker squares off your position. There's no negotiation.", warn: true },
-  { icon: LineChart, title: 'Leverage ratio', text: 'Expressed as something like 10x, 50x or 500x. A 10x ratio means every ₹1 of your capital controls ₹10 of trade value. SmartTrade.live offers up to 500x on select instruments.', warn: false },
+  { icon: LineChart, title: 'Leverage ratio', text: 'Expressed as something like 10x, 50x or 500x. A 10x ratio means every ₹1 of your capital controls ₹10 of trade value. TRADEADDA.live offers up to 500x on select instruments.', warn: false },
   { icon: Layers, title: 'SPAN and exposure margin', text: 'Used in F&O. SPAN is calculated by the exchange based on potential worst-case loss. Exposure margin is an extra buffer. Together they make up the total margin needed for derivative positions.', warn: false },
   { icon: HandCoins, title: 'MTF (Margin Trading Facility)', text: 'The SEBI-regulated facility where you can buy shares using broker funding. You pay interest on the borrowed amount until you square off.', warn: false },
   { icon: Link2, title: 'Margin pledge', text: 'Using shares or other approved assets as collateral instead of (or in addition to) cash. Lets you free up funds while still keeping your investments.', warn: false },
@@ -102,11 +102,11 @@ const notFit = [
 const faqs = [
   { q: 'What is margin trading in simple words?', a: "Margin trading means borrowing money from your broker to take a larger trade than your own funds would allow. You put up a fraction of the total trade value as margin, and the broker funds the rest. Both your potential profits and losses are calculated on the full position size — that's why leverage is powerful and dangerous in equal measure." },
   { q: 'Is margin trading legal in India?', a: 'Yes. Margin trading is legal and regulated by SEBI through approved brokers. MTF for equities and exchange-mandated margins for F&O are standard frameworks.' },
-  { q: 'What is the maximum leverage available on SmartTrade.live?', a: 'Up to 500x leverage on select instruments, among the highest available for qualified traders on our platform.' },
+  { q: 'What is the maximum leverage available on TRADEADDA.live?', a: 'Up to 500x leverage on select instruments, among the highest available for qualified traders on our platform.' },
   { q: 'How does a margin call work?', a: 'When your account equity falls below maintenance margin, the broker notifies you to add funds. If you do not, positions may be squared off automatically to protect both parties.' },
   { q: "What's the difference between initial margin and maintenance margin?", a: 'Initial margin is required to open a position. Maintenance margin is the minimum you must keep while the position is open.' },
   { q: 'Is margin trading good for beginners?', a: 'Generally no. Beginners should master cash trading, stop-losses, and position sizing before using significant leverage.' },
-  { q: 'Can I lose more than my deposited capital in margin trading?', a: 'On SmartTrade.live, negative balance protection caps your loss at deposited capital. Without such protection elsewhere, losses could exceed deposits in extreme moves.' },
+  { q: 'Can I lose more than my deposited capital in margin trading?', a: 'On TRADEADDA.live, negative balance protection caps your loss at deposited capital. Without such protection elsewhere, losses could exceed deposits in extreme moves.' },
   { q: 'What is MTF interest and how much is it?', a: 'MTF interest is the cost of borrowing from your broker for equity margin trades. Rates vary by broker — check your contract note and fee schedule.' },
   { q: 'What happens during a market gap if I\'m using margin?', a: 'Gaps can skip your stop-loss. Losses may exceed what you expected from the stop level, which is why overnight leveraged positions near major events need extra caution.' },
   { q: 'Can I trade with margin in intraday only, or also for longer periods?', a: 'Both are possible depending on product. Intraday margin is common; overnight and positional margin carry additional costs and gap risk.' },
@@ -123,7 +123,7 @@ export default function MarginTradingPage() {
         titleClassName="text-2xl md:text-3xl"
         paragraphs={[
           "There's a reason every serious trader, at some point, ends up using margin. You see a clear setup, your analysis is sharp, your stop-loss is tight — but your trading capital is what it is. You can either take a small position and watch a great move pass you by, or you can use margin to size the trade properly. Margin trading is the bridge between the trade you can afford and the trade you actually want to take.",
-          "SmartTrade.live is built around this idea. We offer margin trading with leverage of up to 500x, real-time margin monitoring, and guardrails such as negative balance protection on supported products. This page explains how margin works, when traders use it, the main risks, and how to size positions responsibly.",
+          "TRADEADDA.live is built around this idea. We offer margin trading with leverage of up to 500x, real-time margin monitoring, and guardrails such as negative balance protection on supported products. This page explains how margin works, when traders use it, the main risks, and how to size positions responsibly.",
         ]}
       />
 
@@ -136,7 +136,7 @@ export default function MarginTradingPage() {
             </div>
             <div className="w-full lg:w-1/2">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">
-                How <span className="text-brand-blue">SmartTrade.live</span> Offers Value
+                How <span className="text-brand-blue">TRADEADDA.live</span> Offers Value
               </h2>
               <ul className="space-y-6">
                 {valueFeatures.map(({ icon: Icon, text }) => (
@@ -246,7 +246,7 @@ export default function MarginTradingPage() {
 
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className={sectionTitle}>Margin Trading on SmartTrade.live — Platform Features</h2>
+          <h2 className={sectionTitle}>Margin Trading on TRADEADDA.live — Platform Features</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {platformFeatures.map(({ icon: Icon, title, text }) => (
               <div key={title} className="flex gap-4">
@@ -351,7 +351,7 @@ export default function MarginTradingPage() {
         variant="light"
         texture="candles"
         title="Ready to Trade Bigger?"
-        subtitle="Margin trading isn't for everyone, but if you're a serious trader with a tested system and the discipline to use a stop-loss, it changes what's possible from your capital. SmartTrade.live gives you up to 500x leverage, real-time margin tracking, proper risk tools and negative balance protection — the things that turn leverage from a hazard into a tool."
+        subtitle="Margin trading isn't for everyone, but if you're a serious trader with a tested system and the discipline to use a stop-loss, it changes what's possible from your capital. TRADEADDA.live gives you up to 500x leverage, real-time margin tracking, proper risk tools and negative balance protection — the things that turn leverage from a hazard into a tool."
         buttonText="Sign Up"
         footerText="Quick KYC, instant activation. Trade your first margin position today."
       />

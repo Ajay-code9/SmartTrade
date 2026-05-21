@@ -5,12 +5,12 @@ import { knowledgeLinks } from '../constants/knowledgeLinks';
 import { productLinks } from '../constants/productLinks';
 import { hasTopBanner } from '../constants/navBanner';
 import { cn } from '../lib/cn';
-import SmartTradeLogo from './auth/SmartTradeLogo';
+import TradeAddaLogo from './auth/TradeAddaLogo';
 import MenuButton from './navigation/MenuButton';
 import MobileSidebar from './navigation/MobileSidebar';
 
 const aboutLinks = [
-  { label: 'Why SmartTrade', to: '/why-smarttrade' },
+  { label: 'Why TRADEADDA', to: '/why-tradeadda' },
   { label: 'Become An Affiliate', to: '/become-affiliate' },
   { label: 'Privacy Policy', to: '/privacy-policy' },
   { label: 'Terms & Conditions', to: '/terms-and-conditions' },
@@ -78,7 +78,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <Link to="/" className="shrink-0" onClick={closeMobile}>
-              <SmartTradeLogo variant="light" size="md" />
+              <TradeAddaLogo variant="light" size="md" />
             </Link>
 
             <nav className="hidden lg:flex items-center h-full flex-1 justify-center min-w-0 relative z-20">

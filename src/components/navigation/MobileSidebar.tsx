@@ -1,13 +1,13 @@
 import { Fragment, type ReactNode } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import SmartTradeLogo from '../auth/SmartTradeLogo';
+import TradeAddaLogo from '../auth/TradeAddaLogo';
 import { ChevronDown, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { knowledgeLinks } from '../../constants/knowledgeLinks';
 import { productLinks } from '../../constants/productLinks';
 
 const aboutLinks = [
-  { label: 'Why SmartTrade', to: '/why-smarttrade' },
+  { label: 'Why TRADEADDA', to: '/why-tradeadda' },
   { label: 'Become An Affiliate', to: '/become-affiliate' },
   { label: 'Privacy Policy', to: '/privacy-policy' },
   { label: 'Terms & Conditions', to: '/terms-and-conditions' },
@@ -146,7 +146,7 @@ export default function MobileSidebar({
             <div className="flex items-center justify-between border-b border-white/10 px-5 py-5 pt-[max(1.25rem,env(safe-area-inset-top))]">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-widest text-white/50 mb-2">Menu</p>
-                <SmartTradeLogo variant="light" size="sm" />
+                <TradeAddaLogo variant="light" size="sm" />
               </div>
               <button
                 type="button"

@@ -4,7 +4,7 @@ import { LOCATIONS } from '../constants/locations';
 import { knowledgeLinks } from '../constants/knowledgeLinks';
 import { productLinks } from '../constants/productLinks';
 import { BannerBackground } from './layout/BannerBackground';
-import SmartTradeLogo from './auth/SmartTradeLogo';
+import TradeAddaLogo from './auth/TradeAddaLogo';
 
 export default function Footer() {
   return (
@@ -21,14 +21,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-20">
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-8">
-              <SmartTradeLogo variant="light" size="lg" />
+              <TradeAddaLogo variant="light" size="lg" />
             </Link>
 
             <div className="flex flex-wrap gap-3">
               {[Facebook, Instagram, MessageCircle, Youtube, Twitter, Send].map((Icon, idx) => (
                 <a
                   key={idx}
-                  href="https://www.smarttrade.live"
+                  href="https://www.tradeadda.live"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="banner-icon-btn w-10 h-10 rounded-full bg-white text-brand-blue flex items-center justify-center hover:bg-brand-orange hover:text-white transition-all transform hover:-translate-y-1"
@@ -43,8 +43,8 @@ export default function Footer() {
             <h4 className="text-xl font-bold italic mb-6">About Us</h4>
             <ul className="space-y-4 text-white">
               <li>
-                <Link to="/why-smarttrade" className="hover:text-white transition-colors">
-                  Why SmartTrade
+                <Link to="/why-tradeadda" className="hover:text-white transition-colors">
+                  Why TRADEADDA
                 </Link>
               </li>
               <li>
@@ -143,7 +143,7 @@ export default function Footer() {
         </div>
 
         <div className="text-center pt-8 border-t border-white/10 text-white text-sm italic">
-          Copyright @2026 SmartTrade.live
+          Copyright @2026 TRADEADDA.live
         </div>
       </div>
     </footer>

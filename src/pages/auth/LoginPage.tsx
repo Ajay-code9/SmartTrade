@@ -10,7 +10,7 @@ import {
   Youtube,
   Send,
 } from 'lucide-react';
-import SmartTradeLogo from '../../components/auth/SmartTradeLogo';
+import TradeAddaLogo from '../../components/auth/TradeAddaLogo';
 import AuthFloatingWidgets from '../../components/auth/AuthFloatingWidgets';
 import FloatingLabelInput from '../../components/forms/FloatingLabelInput';
 import IndiaPhoneField from '../../components/forms/IndiaPhoneField';
@@ -33,13 +33,13 @@ export default function LoginPage() {
     <div className="min-h-screen bg-gradient-to-b from-slate-100 via-gray-50 to-slate-200 flex flex-col items-center justify-center px-4 py-12 relative">
       <header className="text-center mb-8">
         <div className="flex justify-center mb-3">
-          <SmartTradeLogo variant="dark" size="lg" showLink />
+          <TradeAddaLogo variant="dark" size="lg" showLink />
         </div>
         <a
-          href="https://www.smarttrade.live"
+          href="https://www.tradeadda.live"
           className="text-brand-orange font-medium text-sm hover:underline"
         >
-          www.smarttrade.live
+          www.tradeadda.live
         </a>
       </header>
 
@@ -168,7 +168,7 @@ export default function LoginPage() {
           ].map(({ Icon, bg }, idx) => (
             <a
               key={idx}
-              href="https://www.smarttrade.live"
+              href="https://www.tradeadda.live"
               target="_blank"
               rel="noopener noreferrer"
               className={`w-10 h-10 rounded-full ${bg} text-white flex items-center justify-center hover:opacity-90 transition-opacity`}
@@ -178,7 +178,7 @@ export default function LoginPage() {
             </a>
           ))}
         </div>
-        <p className="text-xs text-gray-400">Powered by SmartTrade</p>
+        <p className="text-xs text-gray-400">Powered by TRADEADDA</p>
       </footer>
 
       <AuthFloatingWidgets />

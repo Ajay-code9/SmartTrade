@@ -3,26 +3,26 @@ import PageHeader from '../components/layout/PageHeader';
 import BannerSection from '../components/layout/BannerSection';
 
 const marginRows = [
-  { script: 'Gold', ordinary: 'Rs 5,50,000', smarttrade: 'Rs 13,000' },
-  { script: 'Natural Gas', ordinary: 'Rs 65,000', smarttrade: 'Rs 400' },
-  { script: 'Crude', ordinary: 'Rs 2,50,000', smarttrade: 'Rs 1,500' },
-  { script: 'Silver', ordinary: 'Rs 3,00,000', smarttrade: 'Rs 4,500' },
-  { script: 'Bank Nifty', ordinary: 'Rs 90,000', smarttrade: 'Rs 1,500' },
-  { script: 'Nifty', ordinary: 'Rs 1,20,000', smarttrade: 'Rs 2,500' },
+  { script: 'Gold', ordinary: 'Rs 5,50,000', tradeadda: 'Rs 13,000' },
+  { script: 'Natural Gas', ordinary: 'Rs 65,000', tradeadda: 'Rs 400' },
+  { script: 'Crude', ordinary: 'Rs 2,50,000', tradeadda: 'Rs 1,500' },
+  { script: 'Silver', ordinary: 'Rs 3,00,000', tradeadda: 'Rs 4,500' },
+  { script: 'Bank Nifty', ordinary: 'Rs 90,000', tradeadda: 'Rs 1,500' },
+  { script: 'Nifty', ordinary: 'Rs 1,20,000', tradeadda: 'Rs 2,500' },
 ];
 
 const steps = [
-  { num: 1, icon: FilePen, label: 'Register with SmartTrade.live' },
+  { num: 1, icon: FilePen, label: 'Register with TRADEADDA.live' },
   { num: 2, icon: KeyRound, label: 'Minimal Documents Needed' },
   { num: 3, icon: Wallet, label: 'Deposit Funds' },
   { num: 4, icon: Smartphone, label: 'Start Trading' },
 ];
 
-export default function WhySmartTradePage() {
+export default function WhyTradeAddaPage() {
   return (
     <main className="pt-0">
       <PageHeader
-        title="Why SmartTrade"
+        title="Why TRADEADDA"
         subtitle="Zero brokerage on supported products, up to 500x margin on select instruments, and a single terminal for equities, commodities, and global CFDs."
       />
 
@@ -31,7 +31,7 @@ export default function WhySmartTradePage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">ZERO Brokerage</h2>
           <p className="text-gray-500 mb-10">
-            No More Sharing Your Profits, SmartTrade.live Lets You Keep It All
+            No More Sharing Your Profits, TRADEADDA.live Lets You Keep It All
           </p>
 
           <div className="relative max-w-3xl mx-auto bg-gray-100 rounded-lg overflow-hidden shadow-md">
@@ -54,7 +54,7 @@ export default function WhySmartTradePage() {
               <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-brand-blue rotate-45 z-10" />
               <div className="p-8 md:p-10 text-left">
                 <h3 className="text-brand-blue font-semibold text-lg mb-6 text-center md:text-left">
-                  SmartTrade.live
+                  TRADEADDA.live
                 </h3>
                 <p className="text-gray-800 mb-2">Profit Rs 28000/-</p>
                 <p className="text-gray-800 mb-2">Brokerage, taxes etc. 0/-</p>
@@ -83,7 +83,7 @@ export default function WhySmartTradePage() {
                     Per Lot Margin - Ordinary Platform
                   </th>
                   <th className="px-4 py-4 text-center font-bold text-gray-800">
-                    Per lot Margin - SmartTrade.live
+                    Per lot Margin - TRADEADDA.live
                   </th>
                 </tr>
               </thead>
@@ -92,7 +92,7 @@ export default function WhySmartTradePage() {
                   <tr key={row.script} className="border-b border-gray-100 last:border-0">
                     <td className="px-4 py-4 text-left font-medium text-gray-900">{row.script}</td>
                     <td className="px-4 py-4 text-center text-gray-700">{row.ordinary}</td>
-                    <td className="px-4 py-4 text-center text-gray-700">{row.smarttrade}</td>
+                    <td className="px-4 py-4 text-center text-gray-700">{row.tradeadda}</td>
                   </tr>
                 ))}
               </tbody>
@@ -120,7 +120,7 @@ export default function WhySmartTradePage() {
             Open Account in Just 1 Minute and Start Trading
           </h2>
           <p className="text-white max-w-3xl mx-auto mb-12 leading-relaxed">
-            Join SmartTrade.live now for the ultimate trading experience. Apply for a trading account in just
+            Join TRADEADDA.live now for the ultimate trading experience. Apply for a trading account in just
             1 minute and access advanced tools like technical analysis indicators and customizable charts.
           </p>
 

@@ -1,4 +1,4 @@
-/** Local media under pubic/media/ — reliable for client demos (no broken hotlinks). */
+/** Static images under /media */
 export const MEDIA_IMAGES = {
   tradingChart: '/media/trading-chart.webp',
   tradingDashboard: '/media/trading-dashboard.webp',

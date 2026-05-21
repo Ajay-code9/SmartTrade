@@ -2,7 +2,7 @@ import { FormEvent, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MessageCircle } from 'lucide-react';
 import IndiaPhoneField from '../../components/forms/IndiaPhoneField';
-import SmartTradeLogo from '../../components/auth/SmartTradeLogo';
+import TradeAddaLogo from '../../components/auth/TradeAddaLogo';
 import AuthFloatingWidgets from '../../components/auth/AuthFloatingWidgets';
 import { BannerBackground } from '../../components/layout/BannerBackground';
 
@@ -32,7 +32,7 @@ export default function SignUpPage() {
       <section className="relative flex h-full min-h-0 w-full flex-col justify-between overflow-hidden banner-surface p-8 lg:w-1/2 lg:p-12">
         <BannerBackground />
         <div className="relative z-10">
-          <SmartTradeLogo variant="light" size="lg" showLink />
+          <TradeAddaLogo variant="light" size="lg" showLink />
         </div>
 
         <div className="relative z-10 flex-1 flex flex-col justify-center py-10 lg:py-0 max-w-lg">

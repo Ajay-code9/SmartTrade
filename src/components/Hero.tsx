@@ -47,7 +47,6 @@ const PAUSE_MS = 2000;
 const NEXT_MS = 450;
 const LONGEST_LABEL = 'Indian Stocks (F&O)';
 
-/** Per-character delay for a more natural, smooth typewriter rhythm */
 function getStepDelay(char: string | undefined, deleting: boolean) {
   if (deleting) {
     if (char === ' ') return 32;
@@ -147,7 +146,7 @@ export default function Hero() {
           transition={{ delay: 0.2 }}
           className="text-lg md:text-xl mb-12"
         >
-          Trade Smart With SmartTrade.live
+          Trade With TRADEADDA.live
         </motion.p>
 
         <motion.div 
@@ -157,7 +156,7 @@ export default function Hero() {
           className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 mb-16"
         >
           <button className="w-full md:w-auto px-8 py-3 rounded-md border-2 border-white text-white font-semibold hover:bg-white hover:text-brand-blue transition-all">
-            Why SmartTrade.live?
+            Why TRADEADDA.live?
           </button>
           <button className="w-full md:w-auto px-8 py-3 rounded-md bg-brand-orange text-white font-semibold hover:bg-opacity-90 transition-all shadow-lg">
             Get Started

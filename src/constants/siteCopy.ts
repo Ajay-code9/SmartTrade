@@ -1,6 +1,5 @@
-/** Shared marketing copy — single source for CTAs and disclaimers. */
 export const COMMUNITY_BANNER = {
-  title: 'Join SmartTrade traders on Telegram & WhatsApp',
+  title: 'Join TRADEADDA traders on Telegram & WhatsApp',
   subtitle: 'Market updates, platform tips, and support from the team.',
   buttonText: 'Join community',
 } as const;

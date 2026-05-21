@@ -154,14 +154,14 @@ const chooseCriteria = [
 
 const startSteps = [
   'Read the risk section below before funding an account.',
-  'Register on SmartTrade.live and complete KYC.',
+  'Register on TRADEADDA.live and complete KYC.',
   'Deposit only capital you can afford to lose.',
   'Start with small size until you trust execution and settlement.',
   'Use a stop-loss on every trade.',
   'Review weekly P&L and withdrawal tests.',
 ];
 
-const smartTradeHighlights = [
+const tradeAddaHighlights = [
   {
     title: 'Unified terminal',
     text: 'Web and mobile access with charts, watchlists, and order management in one place.',
@@ -194,7 +194,7 @@ const faqs = [
     a: 'Exchange trading through SEBI-registered brokers is the regulated route. Off-market arrangements carry legal and counterparty risks. Understand local laws and operator terms before participating.',
   },
   {
-    q: 'How is SmartTrade.live different from a traditional broker?',
+    q: 'How is TRADEADDA.live different from a traditional broker?',
     a: 'We focus on speed, zero brokerage on supported products, high margin on select instruments, and in-app risk tools. Product availability and regulation depend on your account type — check onboarding documents.',
   },
   {
@@ -239,7 +239,7 @@ export default function DabbaTradingPage() {
         paragraphs={[
           'Dabba trading is an informal market where orders are matched inside a broker or operator system instead of on NSE or BSE. Traders still watch live exchange prices, but settlement happens off-book between the client and the operator.',
           'Some active traders use this model for speed and margin flexibility. Others avoid it because regulation, transparency, and counterparty risk differ from exchange trading. This page covers mechanics, trade-offs, and what to verify before you fund an account.',
-          'SmartTrade.live provides charts, wallet-based trading, margin tools, and support channels described below. Read the risks section before you trade.',
+          'TRADEADDA.live provides charts, wallet-based trading, margin tools, and support channels described below. Read the risks section before you trade.',
         ]}
       />
 
@@ -317,8 +317,8 @@ export default function DabbaTradingPage() {
           <h2 className={sectionTitle}>Getting started (checklist)</h2>
           <BulletList items={startSteps} />
 
-          <h2 className={sectionTitle}>SmartTrade.live at a glance</h2>
-          <FeatureBlocks items={smartTradeHighlights} />
+          <h2 className={sectionTitle}>TRADEADDA.live at a glance</h2>
+          <FeatureBlocks items={tradeAddaHighlights} />
         </div>
       </section>
 
@@ -333,7 +333,7 @@ export default function DabbaTradingPage() {
             on NSE/BSE.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            If you use SmartTrade.live, start small, test withdrawals, and treat risk controls as mandatory — not
+            If you use TRADEADDA.live, start small, test withdrawals, and treat risk controls as mandatory — not
             optional.
           </p>
         </div>

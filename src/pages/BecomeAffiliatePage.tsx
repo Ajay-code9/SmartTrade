@@ -20,7 +20,7 @@ export default function BecomeAffiliatePage() {
     <main>
       <PageHeader
         title="Become An Affiliate"
-        subtitle="Passionate traders in your audience? Become a SmartTrade Affiliate! Submit your details below and discover best-in-class benefits & commissions. Join our thriving network & start earning today!"
+        subtitle="Passionate traders in your audience? Become a TRADEADDA Affiliate! Submit your details below and discover best-in-class benefits & commissions. Join our thriving network & start earning today!"
       />
 
       <section className="relative -mt-12 md:-mt-16 pb-24 bg-white">

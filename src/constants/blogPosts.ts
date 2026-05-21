@@ -130,7 +130,7 @@ export const recentPosts: BlogPost[] = [
   },
   {
     id: 'r17',
-    title: 'SmartTrade.live Platform Walkthrough for Beginners',
+    title: 'TRADEADDA.live Platform Walkthrough for Beginners',
     date: 'January 30, 2026',
     image: MEDIA_IMAGES.financeStocks,
   },
@@ -214,19 +214,19 @@ export const marginTradingPosts: BlogPost[] = [
 export const mainHighlightPosts: BlogPost[] = [
   {
     id: 'm1',
-    title: 'SmartTrade.live Review 2026: Features, Fees & Verdict',
+    title: 'TRADEADDA.live Review 2026: Features, Fees & Verdict',
     date: 'April 3, 2026',
     image: MEDIA_IMAGES.analyticsScreen,
   },
   {
     id: 'm2',
-    title: 'How to Deposit & Withdraw on SmartTrade.live',
+    title: 'How to Deposit & Withdraw on TRADEADDA.live',
     date: 'March 28, 2026',
     image: MEDIA_IMAGES.laptopTrading,
   },
   {
     id: 'm3',
-    title: 'SmartTrade.live vs Zerodha vs Upstox: Which Broker Wins?',
+    title: 'TRADEADDA.live vs Zerodha vs Upstox: Which Broker Wins?',
     date: 'March 15, 2026',
     image: MEDIA_IMAGES.tradingDashboard,
   },

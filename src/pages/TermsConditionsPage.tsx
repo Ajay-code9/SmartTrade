@@ -40,7 +40,7 @@ const terms = [
   },
   {
     title: 'Group Trading',
-    text: 'Group trading is allowed only with prior approval from SmartTrade.live. Any unapproved group trading activities may lead to account suspension.',
+    text: 'Group trading is allowed only with prior approval from TRADEADDA.live. Any unapproved group trading activities may lead to account suspension.',
   },
   {
     title: 'Payout Delays',
@@ -52,7 +52,7 @@ const terms = [
   },
   {
     title: 'Hedging',
-    text: 'Hedging is not allowed on the SmartTrade.live platform. Any attempt to hedge may result in account restrictions.',
+    text: 'Hedging is not allowed on the TRADEADDA.live platform. Any attempt to hedge may result in account restrictions.',
   },
   {
     title: 'Invalid Orders',
@@ -68,7 +68,7 @@ export default function TermsConditionsPage() {
 
         <div className="text-gray-700 leading-relaxed space-y-4 mb-12">
           <p>
-            Welcome to <strong>SmartTrade.live</strong>, your trusted online trading platform. We are committed to
+            Welcome to <strong>TRADEADDA.live</strong>, your trusted online trading platform. We are committed to
             providing a fair and secure trading environment. Please read these terms carefully before using our
             services.
           </p>
@@ -76,7 +76,7 @@ export default function TermsConditionsPage() {
             Certain practices are prohibited on our platform. Violations can lead to account suspension, loss of
             funds, or legal action. We reserve the right to update these terms at any time.
           </p>
-          <p>These terms apply to all users of the SmartTrade.live platform.</p>
+          <p>These terms apply to all users of the TRADEADDA.live platform.</p>
         </div>
 
         <ul className="space-y-8">
@@ -93,13 +93,13 @@ export default function TermsConditionsPage() {
 
         <div className="mt-16 text-gray-700 leading-relaxed space-y-4">
           <p>
-            Thank you for choosing SmartTrade.live. We are committed to providing a safe and reliable trading
+            Thank you for choosing TRADEADDA.live. We are committed to providing a safe and reliable trading
             experience. Should you have any questions or require assistance, feel free to contact us.
           </p>
           <p>
             <strong>Best Regards,</strong>
             <br />
-            The SmartTrade.live Team
+            The TRADEADDA.live Team
           </p>
         </div>
       </article>

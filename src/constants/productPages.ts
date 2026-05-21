@@ -26,7 +26,7 @@ type ProductPageConfig = Omit<ProductLandingPageProps, 'mockup'>;
 export const cfdPage: ProductPageConfig = {
   title: 'CFD Instrument',
   subtitle:
-    'Explore the world of Contracts for Difference (CFDs) with SmartTrade.live. CFDs allow you to speculate on price movements without owning the underlying asset.',
+    'Explore the world of Contracts for Difference (CFDs) with TRADEADDA.live. CFDs allow you to speculate on price movements without owning the underlying asset.',
   heading: 'value',
   features: [
     { icon: BarChart2, text: 'Advanced trading platforms' },
@@ -40,7 +40,7 @@ export const cfdPage: ProductPageConfig = {
 export const stocksPage: ProductPageConfig = {
   title: 'Stocks',
   subtitle:
-    'Invest in leading global companies through SmartTrade.live. Trade stocks on various global exchanges and benefit from market trends.',
+    'Invest in leading global companies through TRADEADDA.live. Trade stocks on various global exchanges and benefit from market trends.',
   heading: 'why',
   features: [
     { icon: Globe, text: 'Global market access' },

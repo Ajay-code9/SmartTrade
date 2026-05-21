@@ -130,10 +130,10 @@ export default function NewsBlogsPage() {
           </div>
         </div>
 
-        {/* SmartTrade.live highlights + Margin Trading sidebar */}
+        {/* TRADEADDA.live highlights + Margin Trading sidebar */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
           <div className="lg:col-span-9">
-            <SectionHeading>SmartTrade.live</SectionHeading>
+            <SectionHeading>TRADEADDA.live</SectionHeading>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {mainHighlightPosts.map((post) => (
                 <div key={post.id}>

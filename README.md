@@ -1,6 +1,6 @@
-# SmartTrade
+# TRADEADDA
 
-Marketing site for [SmartTrade.live](https://smarttrade.live) — trading platform with zero brokerage, margin, F&O, and commodities.
+Marketing site for [TRADEADDA.live](https://tradeadda.live) — trading platform with zero brokerage, margin, F&O, and commodities.
 
 ## Prerequisites
 

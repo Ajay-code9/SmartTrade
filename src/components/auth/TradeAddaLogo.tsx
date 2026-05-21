@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { LOGO_IMAGE } from '../../constants/assets';
 
-type SmartTradeLogoProps = {
+type TradeAddaLogoProps = {
   variant?: 'light' | 'dark';
   size?: 'sm' | 'md' | 'lg';
   showLink?: boolean;
@@ -13,17 +13,17 @@ const sizeMap = {
   lg: 'h-11',
 } as const;
 
-export default function SmartTradeLogo({
+export default function TradeAddaLogo({
   variant = 'light',
   size = 'md',
   showLink = false,
-}: SmartTradeLogoProps) {
+}: TradeAddaLogoProps) {
   const heightClass = sizeMap[size];
 
   const content = (
     <img
       src={LOGO_IMAGE}
-      alt="SmartTrade"
+      alt="TRADEADDA"
       className={`${heightClass} w-auto object-contain object-left ${
         variant === 'dark' ? 'brightness-0' : ''
       }`}

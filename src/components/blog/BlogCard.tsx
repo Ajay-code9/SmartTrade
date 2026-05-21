@@ -27,7 +27,7 @@ export default function BlogCard({ post, size = 'large', showAuthor = false }: B
             {post.title}
           </h4>
           {showAuthor && (
-            <p className="text-xs text-brand-blue font-medium mt-1">SmartTrade</p>
+            <p className="text-xs text-brand-blue font-medium mt-1">TRADEADDA</p>
           )}
           <p className="text-xs text-gray-400 mt-0.5">{post.date}</p>
         </div>

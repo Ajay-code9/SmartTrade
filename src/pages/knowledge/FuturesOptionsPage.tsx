@@ -103,7 +103,7 @@ export default function FuturesOptionsPage() {
         titleClassName="text-2xl md:text-4xl"
         paragraphs={[
           "Many traders in India begin with cash equities, then move to derivatives for hedging, leverage, or defined risk. Futures and options (F&O) trade on NSE and BSE with standardised contracts, margin rules, and weekly or monthly expiries.",
-          "On SmartTrade.live, a large share of active users trade F&O for leverage, hedging, and defined-risk strategies. You can participate when markets rise or fall, and you can offset risk in a stock portfolio with index or stock options. The requirement is the same everywhere: understand contract specs, margin, and expiry before you size up. This page covers those basics.",
+          "On TRADEADDA.live, a large share of active users trade F&O for leverage, hedging, and defined-risk strategies. You can participate when markets rise or fall, and you can offset risk in a stock portfolio with index or stock options. The requirement is the same everywhere: understand contract specs, margin, and expiry before you size up. This page covers those basics.",
         ]}
       />
 
@@ -193,7 +193,7 @@ export default function FuturesOptionsPage() {
               <strong>Short version:</strong>
             </em>{' '}
             futures are simpler but riskier in absolute terms. Options are more flexible and let you cap your downside,
-            but you have to understand premium behaviour and time decay. Most beginners on SmartTrade.live start with
+            but you have to understand premium behaviour and time decay. Most beginners on TRADEADDA.live start with
             index options — usually Nifty or Bank Nifty — because the contracts are highly liquid and the moves are
             easier to read than individual stocks.
           </p>
@@ -205,7 +205,7 @@ export default function FuturesOptionsPage() {
       {/* How F&O works */}
       <section className="py-12 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className={sectionTitle}>How F&O Trading Works on SmartTrade.live</h2>
+          <h2 className={sectionTitle}>How F&O Trading Works on TRADEADDA.live</h2>
           <p className="text-gray-700 mb-10 max-w-3xl">
             We&apos;ve built the platform so that experienced traders feel at home and new ones don&apos;t get overwhelmed.
             Here&apos;s what a typical F&O trade looks like:
@@ -222,7 +222,7 @@ export default function FuturesOptionsPage() {
             ))}
           </div>
           <p className="text-gray-700 leading-relaxed max-w-4xl">
-            The whole flow takes minutes once you&apos;re set up. And because SmartTrade.live offers up to 500x leverage
+            The whole flow takes minutes once you&apos;re set up. And because TRADEADDA.live offers up to 500x leverage
             with negative balance protection, you get the upside of large positions without the nightmare of owing money
             beyond what&apos;s in your account.             Explore our{' '}
             <Link to="/knowledge/equity-trading" className="text-brand-blue hover:underline">
@@ -240,7 +240,7 @@ export default function FuturesOptionsPage() {
       {/* Platform features */}
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className={sectionTitle}>F&O Trading Features That Set SmartTrade.live Apart</h2>
+          <h2 className={sectionTitle}>F&O Trading Features That Set TRADEADDA.live Apart</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {platformFeatures.map(({ icon: Icon, color, text }) => (
               <div key={text} className="flex gap-4 bg-[#eef6ff] border border-blue-100 rounded-xl p-6">
@@ -306,7 +306,7 @@ export default function FuturesOptionsPage() {
         variant="light"
         texture="candles"
         title="Ready to Start Trading F&O the Right Way?"
-        subtitle="F&O suits traders who understand margin, expiry, and contract specs. SmartTrade.live provides execution, charts, and up to 500x leverage on select instruments — you bring position sizing and stop-loss discipline."
+        subtitle="F&O suits traders who understand margin, expiry, and contract specs. TRADEADDA.live provides execution, charts, and up to 500x leverage on select instruments — you bring position sizing and stop-loss discipline."
         buttonText="Sign Up"
         footerText="No paperwork, No waiting. Get into your first F&O trade in minutes."
       />
